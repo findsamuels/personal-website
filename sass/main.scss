@@ -1,9 +1,4 @@
-$red: red;
+@import "variables";
+@import "base";
+@import "typography";
 
-body{
-    background-color: $red;
-}
-
-h1{
-    color: blue;
-}
