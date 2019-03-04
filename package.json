@@ -1,0 +1,30 @@
+{
+  "name": "findsamuels",
+  "version": "1.0.0",
+  "description": "PersonaL Website",
+  "main": "index.js",
+  "scripts": {
+    "devserver": "live-server --browser=firefox",
+    "start": "npm-run-all devserver sass",
+    "sass": "node-sass -w sass -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/findsamuels/findsamuels.git"
+  },
+  "author": "Samuel Simon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/findsamuels/findsamuels/issues"
+  },
+  "homepage": "https://github.com/findsamuels/findsamuels#readme",
+  "dependencies": {
+    "all": "0.0.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.11.0",
+    "npm-run": "^5.0.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
