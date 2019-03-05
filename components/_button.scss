@@ -1,0 +1,50 @@
+.btn{
+&,
+&:link, 
+&:visited {
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: $color-white;
+   backface-visibility: hidden;
+    color: $color-wine-dark;
+    justify-self: center;
+    display: inline-block;
+     padding: 1.5rem 1.5rem;
+    box-shadow: 0 1.5rem 6rem rgba($color-black, .2);
+    transition: all .3s;
+    cursor: pointer;
+    
+   
+}
+ 
+&:hover{
+    box-shadow: 0 1rem 4rem rgba($color-black,.2);
+  transform: translateY(-1.3rem);
+    &::after{
+        outline: none;
+ transform: scaleX(1.2) scaleY(1.6);
+    opacity: 0;
+    }
+}
+&:active,
+&:focus{
+    transform: translateY(-1.1rem);
+     box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+}
+
+&::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+     z-index: -1;
+     transition: all .4s;
+}
+}
+
+
+    

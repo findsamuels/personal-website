@@ -1,0 +1,59 @@
+
+a{
+    text-decoration: none;
+}
+.heading-1{
+text-transform: uppercase;
+color: $color-white;
+letter-spacing: .5rem;
+font-style: italic;
+font-size: 2rem;
+font-weight: 700;
+text-align: center;
+}
+
+
+
+.brand-logo{
+    text-transform: uppercase;
+color: $color-white;
+letter-spacing: .2rem;
+font-style: italic;
+font-size: 1rem;
+font-weight: 600;
+text-align: center;
+margin: auto; 
+}
+.S-span{
+font-size: 1.5em;
+}
+.heading-2{
+    color: $color-white;
+text-transform: uppercase;
+letter-spacing: .5rem;
+line-height: 2.5rem;
+font-size: 1.5rem;
+font-weight: 500;
+
+}
+
+.heading-3{
+    text-transform: uppercase;
+    color: $color-grey-dark-1;
+letter-spacing: .5rem;
+font-size: 1.5rem;
+font-weight: 700;
+text-align: center;
+}
+
+.heading-4{
+    text-transform: uppercase;
+    color: $color-grey-dark-1;
+letter-spacing: .3rem;
+font-size: 1rem;
+font-weight: 300;
+text-align: center;
+}
+.about__text{
+    text-align: center;
+}
