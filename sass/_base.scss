@@ -12,12 +12,9 @@ body{
     display: grid;
     grid-template-rows: min-content 80vh repeat(5, 1fr);
     grid-template-columns: [full-start] minmax(8rem, 1fr)[center-start] repeat(8 , [col-start] 1fr [col-end]) [center-end]  minmax(8rem, 1fr)[full-end];
+
    
 }
-
- 
-    
-    
     
     .footer{
          background-color: $color-yellow;

@@ -1,46 +1,31 @@
 .nav{
      background-color: $color-grey-dark-1;
-        grid-row: 1 / 2;
         grid-column: full-start / full-end; 
         display: grid; 
-        grid-template-columns: repeat(3,[col-start] 1fr [col-end])[full-start][full-end];
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        align-items: center;
 &__brand{
+    color: $color-white;
         width: 10rem;
        padding-left: 2rem;
         align-self: center;
-        grid-row: 1 / 2;
-        grid-column: col-start 1 / col-end 1;
+        justify-self: start;
+        grid-column: 1 / 2;
     }
 
         &__item{
+        grid-column: 2 / 4;
+        justify-self: center;
         display: grid; 
-        grid-row: 1 / 2;
-        grid-column: col-start 2 / col-end 2;
-            grid-template-columns: repeat(8, 1fr);
-            align-items: center;
+            grid-template-columns: repeat(5, 1fr);
             grid-column-gap: 1.5rem;
             list-style: none;
             text-transform: uppercase;
+            justify-items: center;
+        align-items: center;
   
     }
-    
-    &__list-1{
-           grid-column: 2 / 3;
-    }
-    &__list-2{
-            grid-column: 3 / 4;
-    }
-    &__list-3{
-          grid-column: 4 / 5;
-    }
-    &__list-4{
-             grid-column: 5 / 6;
-    }
-    &__list-5{
-grid-column: 6 / 7;
-    } 
-           
-    
             &__link {
             color: $color-white;
             text-decoration: none;
@@ -48,22 +33,13 @@ grid-column: 6 / 7;
         
 &__social{
             grid-row: 1 / 2;
-          grid-column: col-start 4 / col-end 5;  
+          grid-column: 4 / 5;
+          justify-self: end;
         display: grid; 
-           align-items: center;
            grid-template-columns: repeat(2, 1fr);
-              
+              align-items: center;
     }
-    &__insta{
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-       
-    }
-    &__facebook{
-grid-row: 1 / 2;
-        grid-column: 2 / 3;
-    }
-
+    
     &__icon{
             
             font-size: 1.5rem;

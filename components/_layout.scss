@@ -1,70 +1,195 @@
 .section-about{
 grid-row: 3 / 4;
         grid-column: center-start / center-end;
-      
-    }
-
-    .about{
-
         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
-         grid-gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+       grid-gap: 1.5rem;
+       align-items: center;
+       justify-items: center;
+       padding: 1.5rem;
 
-        &__content{
+.content1{
                 background-color: $color-white;
-                box-shadow: 0 1.5rem 3rem rgba($color-black, .6);
-                width: 80%;
-                padding: 1rem;
-                margin: 0 auto;
-        }
-        &__inspiration{
-                display: grid;
-                
-        grid-template-columns: repeat(min-content, 1fr);
-        grid-row-gap: 1.5rem;
-        grid-column-gap: 2.5rem;
+                box-shadow: $box-shadow-md;
+                padding: 1rem;    
                 text-align: center;
-                &::after{
-                        content: "";
-                        display: block;
-                        font-size: 1rem;
-                        background-color: $color-grey-dark-1;
-                }
+        width: 80%;
         }
-         &__design{
-                 grid-row: 1/ 2;
-        grid-column: 1/ 2;
-                }
-                 &__responsive{
-                         grid-row: 1/ 2;
-        grid-column: 2/ 3;
-                }
-                 &__dynamic{
-                         grid-row: 1/ 2;
-        grid-column: 3/ 4;
-                }
-                 &__speed{
-                         grid-row: 1/ 2;
-        grid-column: 4/ 5;
-                }
-
-
-                &__icon-container{
+        .inspiration{
+                grid-row: 2 / 3;
+                display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+         justify-content: center;
+         grid-gap: 1.5rem;
+         
         
-                       
-                }
-                &__icon{
-                        background-image: linear-gradient(to right bottom, $color-wine-light, $color-grey-dark-1,$color-grey-light-1);
+.design{
+        grid-column: 1/ 2;
+        display: grid;
+         grid-template-rows: repeat(3, 1fr);
+         align-items: center;
+         justify-items: center;
+      
+        &__icon{
+                grid-row: 1 / 2;
+ background-image: linear-gradient(to right bottom, $color-wine-light, $color-grey-dark-1,$color-grey-light-1);
                          -webkit-background-clip: text;
         color: transparent;
         font-size: 5rem;
+        
+        }
+        &__heading{
+        grid-row: 2 / 3;
+        }
+        &__subtitle{
+        grid-row: 3 / 4;
+        }
                 }
-                &__subtitle{
-
+                 .responsive{
+ 
+        grid-column: 2/ 3;
+       display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+         justify-items: center;
+        &__icon{
+                grid-row: 1 / 2;
+ background-image: linear-gradient(to right bottom, $color-wine-light, $color-grey-dark-1,$color-grey-light-1);
+                         -webkit-background-clip: text;
+        color: transparent;
+        font-size: 5rem;
+        
+        }
+        &__heading{
+        grid-row: 2 / 3;
+        }
+        &__subtitle{
+        grid-row: 3 / 4;
+        }
                 }
-//////////////////////////////////////////////////Content end
+                 .dynamic{
 
-        &__skills{
+        grid-column: 3/ 4;
+
+        display: grid;
+         grid-template-rows: repeat(3, 1fr);
+         align-items: center;
+         justify-items: center;
+        &__icon{
+                grid-row: 1 / 2;
+ background-image: linear-gradient(to right bottom, $color-wine-light, $color-grey-dark-1,$color-grey-light-1);
+                         -webkit-background-clip: text;
+        color: transparent;
+        font-size: 5rem;
+        
+        }
+        &__heading{
+        grid-row: 2 / 3;
+        }
+        &__subtitle{
+        grid-row: 3 / 4;
+        }
+                }
+                 .speed{
+
+        grid-column: 4/ 5;
+
+        display: grid;
+         grid-template-rows: repeat(3, 1fr);
+         align-items: center;
+         justify-items: center;
+        
+        &__icon{
+                grid-row: 1 / 2;
+ background-image: linear-gradient(to right bottom, $color-wine-light, $color-grey-dark-1,$color-grey-light-1);
+                         -webkit-background-clip: text;
+        color: transparent;
+        font-size: 5rem;
+        
+        }
+        &__heading{
+        grid-row: 2 / 3;
+        }
+        &__subtitle{
+        grid-row: 3 / 4;
+        }
+                 }
+        }
+         
+//////////////////////////////////////////////////skills
+
+        .skills{
+                grid-row: 3 / 4;
+                display: grid;
+                grid-template-columns: repreat(auto-fit,minmax(25rem, 1fr));
+                grid-column-gap: 1.5rem;
+                align-items: center;
+                justify-items: center;
+
+.skills-description{
+                grid-row: 1 / 2;
+                box-shadow: $box-shadow-md;
+                text-align: center;
+                width: 80%;
+                        &__heading{
+
+                        }
+                        &__text{
+                                
+                        }
+                }
+                .skills-list{
+                        grid-row: 2 / 3;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-gap: 1.5rem;
+
+                &__html{
+                        grid-row: 1 / 2;
+                        grid-column: 1 / 2;
+                padding: 1rem;
+                box-shadow: $box-shadow-md;
+        }
+        &__css{
+                grid-row: 1 / 2;
+                        grid-column: 2 / 3;
+                padding: 1rem;
+                box-shadow: $box-shadow-md;
+        }
+        &__javascript{
+                grid-row: 1 / 2;
+                        grid-column: 3 / 4;
+                padding: 1rem;
+                box-shadow: $box-shadow-md;
+        }
+        &__ui{
+                grid-row: 1 / 2;
+                        grid-column: 4 / 5;
+                padding: 1rem;
+                box-shadow: $box-shadow-md;
+        }
+
+        &__img{
+        width: 10rem;
+        }
+
+        &__title{
 
         }
+        
+        &__subtitle{
+
+        }
+                }
+
+        }        
+
+
     }
+
+    
+         
+
+        
+        
