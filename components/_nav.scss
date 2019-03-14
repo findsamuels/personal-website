@@ -1,5 +1,6 @@
 .nav{
      background-color: $color-grey-dark-1;
+     grid-row: 1 / 2;
         grid-column: full-start / full-end; 
         display: grid; 
         grid-template-columns: repeat(5, 1fr);

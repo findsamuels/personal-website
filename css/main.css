@@ -1,13 +1,25 @@
 .html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    .html {
+      font-size: 50%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+  font-weight: 500;
+  font-size: .9rem; }
 
 .container {
   display: grid;
-  grid-template-rows: min-content 80vh repeat(5, 1fr);
+  grid-template-rows: min-content 80vh repeat(6, min-content);
   grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(8rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: min-content max-content repeat(6, min-content);
+      justify-items: center;
+      padding: 0 1rem; } }
 
 .footer {
   background-color: #ffff00;
@@ -122,132 +134,83 @@ a {
 
 .section-about {
   grid-row: 3 / 4;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1.5rem;
+  justify-items: center;
+  padding: 1.5rem; }
+  .section-about .contentheading1 {
+    grid-row: 1 / 2;
+    width: 80%;
+    padding: 1rem;
+    text-align: center; }
+  .section-about .inspiration {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1.5rem; }
+    .section-about .inspiration .inspirations {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      justify-items: center;
+      text-align: center;
+      padding: 0 1rem; }
+      .section-about .inspiration .inspirations__icon {
+        grid-row: 1 / 2;
+        background-image: linear-gradient(to right bottom, #800000, #333333, #676767);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 5rem; }
+      .section-about .inspiration .inspirations__heading {
+        grid-row: 2 / 3; }
+      .section-about .inspiration .inspirations__subtitle {
+        grid-row: 3 / 4;
+        padding: 0 1.5rem; }
+
+.section-skills {
+  grid-row: 4 / 5;
   grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 1.5rem;
-  align-items: center;
   justify-items: center;
-  padding: 1.5rem; }
-  .section-about .content1 {
-    background-color: #fff;
-    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
-    padding: 1rem;
-    text-align: center;
-    width: 80%; }
-  .section-about .inspiration {
-    grid-row: 2 / 3;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    justify-content: center;
-    grid-gap: 1.5rem; }
-    .section-about .inspiration .design {
-      grid-column: 1/ 2;
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      align-items: center;
-      justify-items: center; }
-      .section-about .inspiration .design__icon {
-        grid-row: 1 / 2;
-        background-image: linear-gradient(to right bottom, #800000, #333333, #676767);
-        -webkit-background-clip: text;
-        color: transparent;
-        font-size: 5rem; }
-      .section-about .inspiration .design__heading {
-        grid-row: 2 / 3; }
-      .section-about .inspiration .design__subtitle {
-        grid-row: 3 / 4; }
-    .section-about .inspiration .responsive {
-      grid-column: 2/ 3;
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      align-items: center;
-      justify-items: center; }
-      .section-about .inspiration .responsive__icon {
-        grid-row: 1 / 2;
-        background-image: linear-gradient(to right bottom, #800000, #333333, #676767);
-        -webkit-background-clip: text;
-        color: transparent;
-        font-size: 5rem; }
-      .section-about .inspiration .responsive__heading {
-        grid-row: 2 / 3; }
-      .section-about .inspiration .responsive__subtitle {
-        grid-row: 3 / 4; }
-    .section-about .inspiration .dynamic {
-      grid-column: 3/ 4;
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      align-items: center;
-      justify-items: center; }
-      .section-about .inspiration .dynamic__icon {
-        grid-row: 1 / 2;
-        background-image: linear-gradient(to right bottom, #800000, #333333, #676767);
-        -webkit-background-clip: text;
-        color: transparent;
-        font-size: 5rem; }
-      .section-about .inspiration .dynamic__heading {
-        grid-row: 2 / 3; }
-      .section-about .inspiration .dynamic__subtitle {
-        grid-row: 3 / 4; }
-    .section-about .inspiration .speed {
-      grid-column: 4/ 5;
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      align-items: center;
-      justify-items: center; }
-      .section-about .inspiration .speed__icon {
-        grid-row: 1 / 2;
-        background-image: linear-gradient(to right bottom, #800000, #333333, #676767);
-        -webkit-background-clip: text;
-        color: transparent;
-        font-size: 5rem; }
-      .section-about .inspiration .speed__heading {
-        grid-row: 2 / 3; }
-      .section-about .inspiration .speed__subtitle {
-        grid-row: 3 / 4; }
-  .section-about .skills {
+  text-align: center;
+  padding: 0 1rem; }
+  .section-skills .skills {
     grid-row: 3 / 4;
     display: grid;
-    grid-template-columns: repreat(auto-fit, minmax(25rem, 1fr));
-    grid-column-gap: 1.5rem;
+    grid-gap: 1.5rem;
     align-items: center;
     justify-items: center; }
-    .section-about .skills .skills-description {
+    .section-skills .skills .skills-description {
       grid-row: 1 / 2;
       box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
-      text-align: center;
-      width: 80%; }
-    .section-about .skills .skills-list {
+      text-align: center; }
+      .section-skills .skills .skills-description__text {
+        padding: 1rem 1.5rem; }
+    .section-skills .skills .skills-list {
       grid-row: 2 / 3;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1.5rem; }
-      .section-about .skills .skills-list__html {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      grid-gap: 1.5rem;
+      justify-items: center; }
+      .section-skills .skills .skills-list .myskills {
         padding: 1rem;
-        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4); }
-      .section-about .skills .skills-list__css {
-        grid-row: 1 / 2;
-        grid-column: 2 / 3;
-        padding: 1rem;
-        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4); }
-      .section-about .skills .skills-list__javascript {
-        grid-row: 1 / 2;
-        grid-column: 3 / 4;
-        padding: 1rem;
-        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4); }
-      .section-about .skills .skills-list__ui {
-        grid-row: 1 / 2;
-        grid-column: 4 / 5;
-        padding: 1rem;
-        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4); }
-      .section-about .skills .skills-list__img {
-        width: 10rem; }
+        display: grid; }
+        .section-skills .skills .skills-list .myskills__img {
+          width: 100%; }
+        .section-skills .skills .skills-list .myskills__subtitle {
+          padding: 0 1.5rem; }
+
+.footer {
+  grid-row: 5 / 6; }
 
 .nav {
   background-color: #333333;
+  grid-row: 1 / 2;
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -303,4 +266,5 @@ a {
   text-align: center;
   display: grid;
   justify-items: center;
-  align-items: center; }
+  align-items: center;
+  padding: 1.5rem; }
