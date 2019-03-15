@@ -33,17 +33,11 @@ body{
   
 
    @media only screen and (max-width: $bp-small) {
-       grid-template-rows: 0vh 80vh repeat(6, min-content);
-
-       &.nav{
-           height: 0;
-           opacity: 0;
-       }
-   }
-       
+       grid-template-rows: 100vh 80vh repeat(6, min-content);
+      
       
         
-    
+    }
 }
     
     .footer{
