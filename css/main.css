@@ -237,14 +237,15 @@ a {
           grid-row: 1 / 2;
           grid-column: 1 / -1;
           transition: all .3s; }
-          .section-skills .skills .skills-list .myskills__img:hover {
-            border: 0.4rem solid #676767;
-            filter: brightness(0.6);
-            transform: scale(1.45);
-            z-index: 11; }
-          .section-skills .skills .skills-list .myskills__img:hover + .myskills__hidden-title {
-            opacity: 1;
-            display: inline-block; }
+          @media only screen and (min-width: 50em) {
+            .section-skills .skills .skills-list .myskills__img:hover {
+              border: 0.4rem solid #676767;
+              filter: brightness(0.6);
+              transform: scale(1.45);
+              z-index: 11; }
+            .section-skills .skills .skills-list .myskills__img:hover + .myskills__hidden-title {
+              opacity: 1;
+              display: inline-block; } }
         .section-skills .skills .skills-list .myskills__hidden-title {
           grid-row: 1 / 2;
           grid-column: 1 / -1;
@@ -255,6 +256,7 @@ a {
           font-size: 1.5rem;
           z-index: 999;
           opacity: 0;
+          display: none;
           height: 0; }
         .section-skills .skills .skills-list .myskills__title {
           background-color: #333333;
@@ -264,8 +266,9 @@ a {
           align-self: end;
           justify-self: center;
           z-index: 10;
-          transform: translateY(80%);
-          width: 70%;
+          transform: translateY(70%);
+          width: 80%;
+          font-size: 1rem;
           padding: 1rem;
           text-transform: lowercase; }
         .section-skills .skills .skills-list .myskills .skill-subtitle {
