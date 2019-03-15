@@ -32,12 +32,18 @@ body{
     grid-template-columns: [full-start] minmax(8rem, 1fr)[center-start] repeat(8 , [col-start] 1fr [col-end]) [center-end]  minmax(8rem, 1fr)[full-end];
   
 
-   @media only screen and (max-width: $bp-medium) {
-       grid-template-rows: 100vw 80vh repeat(6, min-content);
+   @media only screen and (max-width: $bp-small) {
+       grid-template-rows: 0vh 80vh repeat(6, min-content);
+
+       &.nav{
+           height: 0;
+           opacity: 0;
+       }
+   }
+       
       
-       justify-items: center;
         
-    }
+    
 }
     
     .footer{
