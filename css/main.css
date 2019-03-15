@@ -312,7 +312,7 @@ a {
   @media only screen and (max-width: 37.5em) {
     .nav {
       grid-template-rows: min-content;
-      height: 100vh;
+      height: 100%;
       grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
       position: fixed; } }
   .nav__brand {

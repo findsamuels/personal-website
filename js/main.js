@@ -1,1 +1,8 @@
-alert("Loaded");
+
+
+
+
+function alert() {
+    alert("Loaded!");
+}
+alert();
