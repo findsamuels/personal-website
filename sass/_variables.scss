@@ -10,9 +10,22 @@ $color-wine-dark: #400000;
 $color-wine-light: #800000;
 $color-secondary: #800080;
 $color-yellow: #ffff00;
+$color-green: #008000;
+$color-orange: #ff8000;
 
 $box-shadow-lg: 0 1.5rem 3rem rgba($color-black, .6);
 $box-shadow-md: 0 1.5rem 3rem rgba($color-black, .4);
 $box-shadow-sm: 0 1.5rem 3rem rgba($color-black, .2);
 
 $font-default: 1.4rem;
+
+//FONT-FAMILY
+
+$heading-font: 'Merriweather', serif;
+$default-font: 'Open Sans', sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;

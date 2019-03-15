@@ -1,9 +1,5 @@
 
-// RESPONSIVE BREAKPOINTS
-$bp-largest: 75em;   // 1200px
-$bp-large: 62.5em;   // 1000px
-$bp-medium: 50em;    // 800px;
-$bp-small: 37.5em;    // 600px;
+
 
 .html{
     font-size: 62.5%; //initial page font size 16px
@@ -16,26 +12,31 @@ $bp-small: 37.5em;    // 600px;
 
 
 body{
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+     box-sizing: border-box;
     color: $color-grey-dark-1;
     font-weight: 500;
     font-size: .9rem;
-    //font-family: 'Open Sans', sans-serif;
+    font-family: $default-font;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 .container{
-
+   
     display: grid;
     grid-template-rows: min-content 80vh repeat(6, min-content);
     grid-template-columns: [full-start] minmax(8rem, 1fr)[center-start] repeat(8 , [col-start] 1fr [col-end]) [center-end]  minmax(8rem, 1fr)[full-end];
-
   
 
    @media only screen and (max-width: $bp-medium) {
-       grid-template-rows: min-content max-content repeat(6, min-content);
-        justify-items: center;
-         padding: 0 1rem;
+       grid-template-rows: 100vw 80vh repeat(6, min-content);
+      
+       justify-items: center;
+        
     }
 }
     

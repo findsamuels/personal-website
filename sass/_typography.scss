@@ -10,6 +10,7 @@ font-style: italic;
 font-size: 2rem;
 font-weight: 700;
 text-align: center;
+font-family: $heading-font;
 }
 
 
@@ -35,16 +36,17 @@ letter-spacing: .5rem;
 line-height: 2.5rem;
 font-size: 1.5rem;
 font-weight: 500;
-
+font-family: $heading-font;
 }
 
 .heading-3{
     text-transform: uppercase;
     color: $color-grey-dark-1;
 letter-spacing: .5rem;
-font-size: 1.5rem;
+font-size: 2rem;
 font-weight: 700;
 text-align: center;
+font-family: $heading-font;
 }
 
 .heading-4{
@@ -54,7 +56,25 @@ letter-spacing: .3rem;
 font-size: 1rem;
 font-weight: 300;
 text-align: center;
+font-family: $heading-font;
 }
 .about__text{
     text-align: center;
+}
+
+.expert{
+border-left: solid .3rem $color-green;
+border-right:  solid .3rem $color-green;
+box-shadow: 0 0 1.5rem $color-green;
+font-style: italic;
+margin-left: 1.5rem;
+padding: .4rem
+}
+.advanced{
+border-left: solid .3rem $color-orange;
+border-right:  solid .3rem $color-orange;
+font-style: italic;
+box-shadow: 0 0 1.5rem $color-orange;
+margin-left: 1.5rem;
+padding: .4rem
 }
