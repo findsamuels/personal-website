@@ -9,6 +9,11 @@
        justify-items: center;
        text-align: center;
 width: 100%;
+
+@media only screen and (max-width: $bp-small){
+                grid-column: center-start / center-end;
+                justify-content: center;
+         }
        .skills{
                 grid-row: 3 / 4;
                 display: grid;

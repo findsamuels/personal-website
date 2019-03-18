@@ -1,6 +1,6 @@
 .html {
   font-size: 62.5%; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 37.5em) {
     .html {
       font-size: 50%; } }
 
@@ -10,8 +10,7 @@ body {
   font-weight: 500;
   font-size: .9rem;
   margin: 0 auto;
-  font-family: "Open Sans", sans-serif;
-  overflow-x: hidden; }
+  font-family: "Open Sans", sans-serif; }
 
 *, ::before, ::after {
   margin: 0;
@@ -21,6 +20,7 @@ body {
 .container {
   display: grid;
   width: 100%;
+  overflow-x: hidden;
   grid-template-rows: min-content 80vh repeat(6, min-content);
   grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(8rem, 1fr) [full-end]; }
 
@@ -170,6 +170,10 @@ a {
   justify-items: center;
   text-align: center;
   width: 100%; }
+  @media only screen and (max-width: 37.5em) {
+    .section-skills {
+      grid-column: center-start / center-end;
+      justify-content: center; } }
   .section-skills .skills {
     grid-row: 3 / 4;
     display: grid;
@@ -372,6 +376,10 @@ a {
   grid-gap: 1.5rem;
   justify-items: center;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .section-about {
+      grid-column: center-start / center-end;
+      justify-content: center; } }
   .section-about .contentheading1 {
     grid-row: 1 / 2;
     text-align: center; }
@@ -404,4 +412,5 @@ a {
       .section-about .inspiration .inspirations__heading {
         grid-row: 2 / 3; }
       .section-about .inspiration .inspirations__subtitle {
-        grid-row: 3 / 4; }
+        grid-row: 3 / 4;
+        padding: 0 1.5rem; }
