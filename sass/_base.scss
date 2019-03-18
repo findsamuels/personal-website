@@ -16,7 +16,9 @@ body{
     color: $color-grey-dark-1;
     font-weight: 500;
     font-size: .9rem;
+    margin: 0 auto;
     font-family: $default-font;
+    overflow-x: hidden;
 }
 
 *, ::before, ::after {
@@ -27,6 +29,7 @@ body{
 
 .container{
     display: grid;
+    width: 100%;
     grid-template-rows: min-content 80vh repeat(6, min-content);
     grid-template-columns: [full-start] minmax(8rem, 1fr)[center-start] repeat(8 , [col-start] 1fr [col-end]) [center-end]  minmax(8rem, 1fr)[full-end];
 }
