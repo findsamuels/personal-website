@@ -288,19 +288,20 @@ a {
   grid-gap: 1.5rem; }
   @media only screen and (max-width: 37.5em) {
     .nav {
-      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-      border-bottom: solid 0.2rem rgba(64, 0, 0, 0.8);
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: solid 0.2rem #400000;
       padding: 0 2rem; } }
   .nav__brand {
     color: #fff;
+    grid-row: 1 / 2;
     grid-column: 1 / 2;
     font-size: 1.4rem; }
     @media only screen and (max-width: 37.5em) {
       .nav__brand {
         grid-row: 1 / 2;
-        grid-column: 1 / 2;
+        grid-column: 2 / 3;
         align-items: center;
-        justify-self: start;
+        justify-self: center;
         text-align: center;
         font-size: 2rem; } }
   .nav__item {
@@ -314,7 +315,7 @@ a {
     @media only screen and (max-width: 37.5em) {
       .nav__item {
         display: block;
-        grid-row: 3/ 4;
+        grid-row: 2/ 3;
         grid-column: 1 / 2;
         grid-gap: 0;
         padding: .4rem .5rem;
@@ -343,28 +344,32 @@ a {
     align-items: center; }
     @media only screen and (max-width: 37.5em) {
       .nav__social {
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
         grid-column: 1 / 2;
-        justify-self: start; } }
+        justify-self: start;
+        font-size: 3rem; } }
   .nav__icon {
     font-size: 1.5rem;
     color: #fff;
     background-color: #333333;
     padding: .5rem;
     box-shadow: 1.5 rgba(255, 255, 255, 0.7); }
+    @media only screen and (max-width: 37.5em) {
+      .nav__icon {
+        font-size: 3rem; } }
   .nav__togglecontainer {
     opacity: 0;
     display: none;
     cursor: pointer; }
     @media only screen and (max-width: 37.5em) {
       .nav__togglecontainer {
-        grid-row: 2 / 3;
-        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
         display: block;
         opacity: 1;
         justify-self: end; } }
   .nav__toggle {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #fff; }
 
 .head {
@@ -403,7 +408,7 @@ a {
     grid-column: 1 / -1;
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     text-align: center;
     justify-items: center;
