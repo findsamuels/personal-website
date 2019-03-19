@@ -301,7 +301,8 @@ a {
         grid-column: 1 / 2;
         align-items: center;
         justify-self: start;
-        text-align: center; } }
+        text-align: center;
+        font-size: 2rem; } }
   .nav__item {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -331,7 +332,7 @@ a {
     text-decoration: none; }
     @media only screen and (max-width: 37.5em) {
       .nav__link {
-        font-size: 1.4rem;
+        font-size: 2rem;
         font-family: "Merriweather", serif; } }
   .nav__social {
     grid-row: 1 / 2;
@@ -406,7 +407,7 @@ a {
     align-items: center;
     text-align: center;
     justify-items: center;
-    grid-gap: 1rem; }
+    grid-gap: 1.5rem; }
     @media only screen and (max-width: 62.5em) {
       .section-about .inspiration {
         justify-content: center;

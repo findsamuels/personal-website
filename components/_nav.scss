@@ -31,7 +31,8 @@
             grid-column: 1 / 2;
             align-items: center;
             justify-self: start;
-            text-align: center;            
+            text-align: center; 
+             font-size: 2rem;           
         }
 
     }
@@ -81,7 +82,7 @@
             text-decoration: none;
             
             @include respond(phone) {
-            font-size: $heading-3-font;
+            font-size: 2rem;
             font-family: $heading-font;
         }
         }
@@ -127,7 +128,7 @@ opacity: 0;
        
 &__toggle{
     
-    font-size: $heading-1-font;
+    font-size: 2rem;
     color: $color-white;
     
     
