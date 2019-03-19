@@ -41,8 +41,8 @@ width: 100%;
                 display: grid;
                 justify-items: center;
                 align-items: center;
-                        position: relative;
-
+                    
+                        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
 
                 &__img{
