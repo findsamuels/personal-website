@@ -11,7 +11,8 @@ body {
   font-size: .9rem;
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
-  max-width: 100%; }
+  max-width: 100%;
+  overflow: hidden; }
 
 *, ::before, ::after {
   margin: 0;
@@ -413,7 +414,9 @@ a {
       justify-items: center;
       align-items: center;
       text-align: center;
-      background-color: #f9f7f6; }
+      background-color: #f9f7f6;
+      height: 15rem;
+      padding: .5rem; }
       .section-about .inspiration .inspirations__icon {
         grid-row: 1 / 2;
         background-image: linear-gradient(to right bottom, #800000, #333333, #f9f7f6);
