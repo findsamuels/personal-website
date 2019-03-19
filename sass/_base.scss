@@ -19,7 +19,7 @@ body{
     margin: 0 auto;
     font-family: $default-font;
     
-    overflow-x: hidden;
+   
     
 }
 
@@ -38,6 +38,7 @@ body{
 
     @media only screen and(max-width: $bp-medium){
         justify-content: center;
+         overflow-x: hidden;
     }
 }
     

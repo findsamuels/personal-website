@@ -10,8 +10,7 @@ body {
   font-weight: 500;
   font-size: .9rem;
   margin: 0 auto;
-  font-family: "Open Sans", sans-serif;
-  overflow-x: hidden; }
+  font-family: "Open Sans", sans-serif; }
 
 *, ::before, ::after {
   margin: 0;
@@ -25,7 +24,8 @@ body {
   grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(8rem, 1fr) [full-end]; }
   @media only screen and (max-width: 50em) {
     .container {
-      justify-content: center; } }
+      justify-content: center;
+      overflow-x: hidden; } }
 
 .footer {
   background-color: #ffff00;
