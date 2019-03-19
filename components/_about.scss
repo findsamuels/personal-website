@@ -9,11 +9,12 @@ grid-row: 3 / 4;
        grid-gap: 1.5rem;
        justify-items: center;
        align-items: center;
-@media only screen and (max-width: $bp-small){
-  
-                justify-content: center;
+
+       @include respond(phone){
+justify-content: center;
                 grid-column: full-start / full-end;
-         }
+       }
+
 
          
        .contentheading1{
@@ -33,9 +34,12 @@ grid-row: 3 / 4;
          justify-items: center;
                 grid-gap: 1rem;
                 
-         @media only screen and (max-width: $bp-large){
+         
+
+         @include respond(tab-land){
+justify-content: center;
                 grid-template-columns: repeat(2, 1fr);
-         }
+       }
         
 .inspirations{
         
@@ -57,23 +61,20 @@ box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
                          -webkit-background-clip: text;
         color: transparent;
         font-size: 4rem;
-        @media only screen and (max-width: $bp-small){
-                font-size: 2rem;
-         }
+        
+         @include respond(phone)
+
         }
         &__heading{
 grid-row: 2 / 3;
-@media only screen and (max-width: $bp-small){
-                font-size: .5rem;
-         }
+
+
         }
         &__subtitle{
         grid-row: 3 / 4;
         padding: 0 1.5rem;
         
-         @media only screen and (max-width: $bp-small){
-                font-size: .5rem;
-         }
+        
         }
          }
                  

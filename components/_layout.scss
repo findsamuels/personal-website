@@ -103,18 +103,18 @@ width: 100%;
                         z-index: 10;
                          transform: translateY(100%);
                          width: 80%;
-                         font-size: 1rem;
+                         
                          padding: 1rem;
 
                          @media only screen and (max-width: $bp-medium){
         font-size: .6rem;
                          }
-         @media only screen and (min-width: $bp-medium) and (max-width: $bp-large){
-         width: 90%;
-         font-size: .8rem;
+        //  @media only screen and (min-width: $bp-medium) and (max-width: $bp-large){
+        //  width: 90%;
+        //  font-size: .8rem;
                 
                     
-         }
+        //  }
                          
                          
                          
@@ -132,7 +132,7 @@ width: 100%;
                 align-items: center;
                 margin-top: 1rem;
                 padding: 2rem 1.5rem; 
-                        font-size: 1rem;
+                        font-size: $default-font-size;
 
                 &__skill1{
                         grid-row: 1 / 2;

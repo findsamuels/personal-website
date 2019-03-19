@@ -1,31 +1,31 @@
 
 
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
-.html{
-    font-size: 62.5%; //initial page font size 16px
-    @media only screen and (max-width: $bp-medium) {
-        font-size: 50%;
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
     }
-    @media only screen and (max-width: $bp-large) {
-        font-size: 56%;
-    }
-    @media only screen and (max-width: $bp-largest) {
-        font-size: 75%;
-    }
-}
 
-
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+} 
 
 
 body{
      box-sizing: border-box;
     color: $color-grey-dark-1;
     font-weight: 500;
-    font-size: .9rem;
+    font-size: $default-font-size;
     margin: 0 auto;
     font-family: $default-font;
-    
-   
+  
     
 }
 
@@ -42,7 +42,8 @@ body{
     grid-template-rows: min-content 80vh repeat(6, min-content);
     grid-template-columns: [full-start] minmax(8rem, 1fr)[center-start] repeat(8 , [col-start] 1fr [col-end]) [center-end]  minmax(8rem, 1fr)[full-end];
 
-    @media only screen and(max-width: $bp-medium){
+    @include respond(phone){
+        grid-template-rows: min-content 50vh repeat(6, min-content);
         justify-content: center;
          overflow-x: hidden;
     }
