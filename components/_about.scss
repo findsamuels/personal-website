@@ -1,7 +1,7 @@
 
 .section-about{
 grid-row: 3 / 4;
-        grid-column: full-start / full-end;
+        grid-column: center-start / center-end;
         display: grid;
         width: 100%;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -10,17 +10,12 @@ grid-row: 3 / 4;
        align-items: center;
 @media only screen and (max-width: $bp-small){
          
-                grid-column: center-start / center-end;
-                justify-content: center;
                 
+                justify-content: center;
+                grid-column: full-start / full-end;
          }
 
-         @media only screen and (min-width: $bp-small) and (max-width: $bp-medium){
-         width: 95%;
-                grid-column: full-start / full-end;
-                
-                
-         }
+         
        .contentheading1{
               
                grid-row: 1 / 2;   
@@ -38,10 +33,9 @@ grid-row: 3 / 4;
          justify-items: center;
                 grid-gap: 1rem;
                 
-         @media only screen and (max-width: $bp-small){
-                 grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+         @media only screen and (min-width: $bp-small) and (max-width: $bp-large){
+                grid-template-columns: repeat(2, 1fr);
          }
-         
         
 .inspirations{
         
