@@ -47,7 +47,7 @@ grid-row: 3 / 4;
         //  background-color: $color-grey-light-1;
          height: 100%;
 box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-         
+         padding: .2rem;
        
       
         &__icon{
@@ -57,14 +57,23 @@ box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
                          -webkit-background-clip: text;
         color: transparent;
         font-size: 4rem;
+        @media only screen and (max-width: $bp-small){
+                font-size: 2rem;
+         }
         }
         &__heading{
 grid-row: 2 / 3;
-
+@media only screen and (max-width: $bp-small){
+                font-size: .5rem;
+         }
         }
         &__subtitle{
         grid-row: 3 / 4;
         padding: 0 1.5rem;
+        
+         @media only screen and (max-width: $bp-small){
+                font-size: .5rem;
+         }
         }
          }
                  
