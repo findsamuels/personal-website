@@ -9,8 +9,16 @@ grid-row: 3 / 4;
        justify-items: center;
        align-items: center;
 @media only screen and (max-width: $bp-small){
+         
                 grid-column: center-start / center-end;
                 justify-content: center;
+                
+         }
+
+         @media only screen and (min-width: $bp-small) and (max-width: $bp-medium){
+         width: 95%;
+                grid-column: full-start / full-end;
+                
                 
          }
        .contentheading1{

@@ -20,9 +20,11 @@ body {
 .container {
   display: grid;
   width: 100%;
-  overflow-x: hidden;
   grid-template-rows: min-content 80vh repeat(6, min-content);
   grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(8rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 50em) {
+    .container {
+      justify-content: center; } }
 
 .footer {
   background-color: #ffff00;
@@ -233,6 +235,9 @@ a {
           width: 80%;
           font-size: 1rem;
           padding: 1rem; }
+          @media only screen and (max-width: 50em) {
+            .section-skills .skills .skills-list .myskills__title {
+              font-size: .6rem; } }
         .section-skills .skills .skills-list .myskills .skill-subtitle {
           grid-row: 2 / 3;
           grid-column: 1 / -1;
@@ -278,8 +283,7 @@ a {
     .nav {
       grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
       border-bottom: solid 0.2rem rgba(64, 0, 0, 0.8);
-      padding: 0 2rem;
-      transition: ease-in all 2s; } }
+      padding: 0 2rem; } }
   .nav__brand {
     color: #fff;
     width: 10rem;
@@ -302,10 +306,12 @@ a {
     justify-items: center; }
     @media only screen and (max-width: 37.5em) {
       .nav__item {
+        display: block;
         grid-row: 3/ 4;
         grid-column: 1 / 2;
         grid-gap: 0;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        padding: .4rem .5rem;
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
         justify-self: start; } }
   .nav__displayitem {
     opacity: 1;
@@ -380,6 +386,10 @@ a {
     .section-about {
       grid-column: center-start / center-end;
       justify-content: center; } }
+  @media only screen and (min-width: 37.5em) and (max-width: 50em) {
+    .section-about {
+      width: 95%;
+      grid-column: full-start / full-end; } }
   .section-about .contentheading1 {
     grid-row: 1 / 2;
     text-align: center; }

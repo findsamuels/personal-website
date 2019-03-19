@@ -14,7 +14,7 @@
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); 
   border-bottom: solid .2rem rgba($color-wine-dark, .8);     
   padding: 0 2rem;
-  transition: ease-in all 2s;
+ 
         }
 
         
@@ -47,10 +47,12 @@
     
 
         @media only screen and (max-width: $bp-small) {
+            display: block;
             grid-row: 3/ 4;
             grid-column: 1 / 2;
             grid-gap: 0;
-            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));  
+            padding: .4rem .5rem;
+            grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));  
            justify-self: start;
         //    opacity: 0;
         //    display: none;
