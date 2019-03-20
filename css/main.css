@@ -45,8 +45,7 @@ a {
 .heading-1 {
   text-transform: uppercase;
   letter-spacing: .5rem;
-  font-style: italic;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
   font-family: "Merriweather", serif; }
@@ -55,21 +54,19 @@ a {
   text-transform: uppercase;
   color: #fff;
   letter-spacing: .2rem;
-  font-style: italic;
-  font-size: 1rem;
   font-weight: 600;
   text-align: center;
   margin: auto; }
 
 .S-span {
-  font-size: 2rem; }
+  font-size: 2.5rem; }
 
 .heading-2 {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: .5rem;
   line-height: 2.5rem;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 500;
   font-family: "Merriweather", serif; }
 
@@ -77,7 +74,7 @@ a {
   text-transform: uppercase;
   color: #333333;
   letter-spacing: .5rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   text-align: center;
   font-family: "Merriweather", serif; }
@@ -86,7 +83,7 @@ a {
   text-transform: uppercase;
   color: #333333;
   letter-spacing: .3rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 300;
   text-align: center;
   font-family: "Merriweather", serif; }
@@ -181,6 +178,7 @@ a {
   width: 100%; }
   @media only screen and (max-width: 37.5em) {
     .section-skills {
+      grid-column: center-start / center-end;
       justify-content: center; } }
   .section-skills .skills {
     grid-row: 3 / 4;
@@ -199,13 +197,13 @@ a {
       justify-items: center; }
       @media only screen and (max-width: 37.5em) {
         .section-skills .skills .skills-list {
-          grid-template-columns: min-content; } }
+          grid-template-columns: auto; } }
       .section-skills .skills .skills-list .myskills {
         background-color: #f9f7f6;
         display: grid;
         justify-items: center;
         align-items: center;
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+        box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2); }
         .section-skills .skills .skills-list .myskills__img {
           width: 100%;
           grid-row: 1 / 2;
@@ -291,13 +289,13 @@ a {
   @media only screen and (max-width: 37.5em) {
     .nav {
       grid-template-columns: repeat(3, 1fr);
-      border-bottom: solid 0.2rem #400000;
+      border-bottom: solid 0.2rem rgba(103, 103, 103, 0.8);
       padding: .5rem; } }
   .nav__brand {
     color: #fff;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-transform: uppercase; }
     @media only screen and (max-width: 37.5em) {
       .nav__brand {
@@ -321,20 +319,21 @@ a {
       .nav__item {
         display: block;
         grid-row: 2/ 3;
-        grid-column: 1 / 2;
+        grid-column: 1 / -1;
+        width: 100%;
         grid-gap: 0;
         padding: .4rem .5rem;
         grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
         justify-self: start;
-        opacity: 0;
-        display: none; } }
+        border-top: 0.2rem solid #676767; } }
   .nav__displayitem {
     opacity: 1;
     display: block;
     transition: ease-in all 2s; }
   @media only screen and (max-width: 37.5em) {
     .nav__list {
-      margin-bottom: 1rem; } }
+      margin-bottom: 1rem;
+      padding: .4rem 0; } }
   .nav__link {
     color: #fff;
     text-decoration: none; }
@@ -355,7 +354,7 @@ a {
         grid-column: 1 / 2;
         justify-self: start;
         font-size: 3rem;
-        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
         border-right: 0.2rem solid rgba(103, 103, 103, 0.9); } }
   .nav__icon {
     font-size: 1.5rem;
@@ -382,7 +381,7 @@ a {
     color: #fff; }
     @media only screen and (max-width: 37.5em) {
       .nav__toggle {
-        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
         border-left: 0.2rem solid rgba(103, 103, 103, 0.9);
         padding: 1rem; } }
 
@@ -441,7 +440,7 @@ a {
       align-items: center;
       text-align: center;
       height: 100%;
-      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+      box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
       padding: .2rem; }
       .section-about .inspiration .inspirations__icon {
         grid-row: 1 / 2;

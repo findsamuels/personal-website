@@ -17,6 +17,9 @@ $box-shadow-lg: 0 1.5rem 3rem rgba($color-black, .8);
 $box-shadow-md: 0 1.5rem 3rem rgba($color-black, .4);
 $box-shadow-sm: 0 1.5rem 3rem rgba($color-black, .2);
 
+$box-shadow-pressed-lg: 0 0.3rem 0.3rem rgba($color-black, .6);
+$box-shadow-pressed-md: 0 0.3rem 0.3rem rgba($color-black, .4);
+$box-shadow-pressed-sm: 0 0.3rem 0.3rem rgba($color-black, .2);
 
 
 $font-default: 1.4rem;
@@ -35,6 +38,6 @@ $bp-small: 37.5em;    // 600px;
 // FONT
 $default-font-size: 1.2rem;
 $heading-font-big: 3rem;
-$heading-1-font: 2rem;
-$heading-2-font: 1.6rem;
-$heading-3-font: 1.4rem;
+$heading-1-font: 2.5rem;
+$heading-2-font: 2rem;
+$heading-3-font: 1.6rem;

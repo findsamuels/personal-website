@@ -12,7 +12,7 @@
 @include respond(phone) {
     
   grid-template-columns: repeat(3, 1fr); 
-  border-bottom: solid .2rem rgba($color-wine-dark, 1);     
+  border-bottom: solid .2rem rgba($color-grey-light-2, .8);     
   padding: .5rem;
  
         }
@@ -55,13 +55,16 @@
        @include respond(phone) {
             display: block;
             grid-row: 2/ 3;
-            grid-column: 1 / 2;
+            grid-column: 1 / -1;
+            width: 100%;
             grid-gap: 0;
             padding: .4rem .5rem;
             grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));  
            justify-self: start;
-            opacity: 0;
-           display: none;
+           border-top: .2rem solid rgba($color-grey-light-2, 1);
+           
+        //     opacity: 0;
+        //    display: none;
              
         }
   
@@ -78,6 +81,7 @@
 
       @include respond(phone) {
             margin-bottom: 1rem;
+            padding: .4rem 0;
         }
 
     }
@@ -103,7 +107,7 @@
         grid-column: 1 / 2;
            justify-self: start;
            font-size: $heading-font-big;
-           box-shadow: $box-shadow-lg;
+           box-shadow: $box-shadow-pressed-sm;
            border-right: .2rem solid rgba($color-grey-light-2, .9);
               }
     }
@@ -145,8 +149,8 @@ opacity: 0;
     color: $color-white;
     
     @include respond(phone){
-box-shadow: $box-shadow-lg;
-           border-left: .2rem solid rgba($color-grey-light-2, .9);
+box-shadow: $box-shadow-pressed-sm;
+        border-left: .2rem solid rgba($color-grey-light-2, .9);
            padding: 1rem;
     }
     
