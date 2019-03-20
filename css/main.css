@@ -396,6 +396,9 @@ a {
     @media only screen and (max-width: 62.5em) {
       .form__label {
         padding-left: 2.5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .form__label {
+        padding-left: 2rem; } }
   .form__input {
     grid-row: 2 / 3;
     width: 90%;
@@ -418,7 +421,7 @@ a {
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1.5; }
+    grid-gap: 1.5rem; }
     @media only screen and (max-width: 37.5em) {
       .inspiration .inspiration-list {
         grid-template-columns: repeat(2, 1fr); } }

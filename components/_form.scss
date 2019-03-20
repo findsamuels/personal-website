@@ -47,6 +47,10 @@ grid-row: 1 / 2;
           @include respond(tab-land){
               padding-left: 2.5rem;
           }
+          @include respond(phone){
+              padding-left: 2rem;
+          }
+          
           
 
 
