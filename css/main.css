@@ -225,6 +225,7 @@ a {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
+  box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
   z-index: 1000;
   grid-gap: 1.5rem; }
   @media only screen and (max-width: 37.5em) {
@@ -279,10 +280,10 @@ a {
       padding: .4rem 0; } }
   .nav__link {
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 1.6rem; }
     @media only screen and (max-width: 37.5em) {
       .nav__link {
-        font-size: 2rem;
         font-family: "Merriweather", serif; } }
   .nav__social {
     grid-row: 1 / 2;
@@ -326,7 +327,7 @@ a {
         padding: 1rem; } }
 
 .head {
-  background-image: linear-gradient(to right bottom, #333333, #676767, #676767, #800000);
+  background-image: linear-gradient(to right top, #333333, #676767, #400000);
   background-size: cover;
   background-position: center;
   grid-row: 2 / 3;

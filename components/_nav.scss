@@ -7,11 +7,13 @@
         grid-template-columns: repeat(3, 1fr);  
         justify-items: center;
         align-items: center;
+        box-shadow: $box-shadow-pressed-md;
         z-index: 1000;
         grid-gap: 1.5rem;
 @include respond(phone) {
     
   grid-template-columns: repeat(3, 1fr); 
+  
   border-bottom: solid .2rem rgba($color-grey-light-2, .8);     
   padding: .5rem;
  
@@ -88,10 +90,11 @@
             &__link {
             color: $color-white;
             text-decoration: none;
-            
+            font-size: $heading-3-font;
             @include respond(phone) {
-            font-size: 2rem;
+         
             font-family: $heading-font;
+
         }
         }
         
