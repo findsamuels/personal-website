@@ -4,11 +4,9 @@ a{
 }
 .heading-1{
 text-transform: uppercase;
-
 letter-spacing: .5rem;
 font-size: $heading-1-font;
 font-weight: 700;
-text-align: center;
 font-family: $heading-font;
 }
 
@@ -38,7 +36,6 @@ font-family: $heading-font;
 
 .heading-3{
     text-transform: uppercase;
-    color: $color-grey-dark-1;
 letter-spacing: .5rem;
 font-size: $heading-3-font;
 font-weight: 700;
@@ -47,10 +44,8 @@ font-family: $heading-font;
 }
 
 .heading-4{
-    text-transform: uppercase;
-    color: $color-grey-dark-1;
 letter-spacing: .3rem;
-font-size: $heading-3-font;
+font-size: $heading-4-font;
 font-weight: 300;
 text-align: center;
 font-family: $heading-font;
@@ -73,5 +68,5 @@ border-right:  solid .3rem $color-orange;
 font-style: italic;
 box-shadow: 0 0 1.5rem $color-orange;
 margin-left: 1.5rem;
-padding: .4rem
+padding: .4rem;
 }

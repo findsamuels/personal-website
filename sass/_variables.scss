@@ -13,6 +13,7 @@ $color-yellow: #ffff00;
 $color-green: #008000;
 $color-orange: #ff8000;
 
+///BOX-SHADOW
 $box-shadow-lg: 0 1.5rem 3rem rgba($color-black, .8);
 $box-shadow-md: 0 1.5rem 3rem rgba($color-black, .4);
 $box-shadow-sm: 0 1.5rem 3rem rgba($color-black, .2);
@@ -42,3 +43,11 @@ $heading-font-big: 3rem;
 $heading-1-font: 2.5rem;
 $heading-2-font: 2rem;
 $heading-3-font: 1.6rem;
+$heading-4-font: 1.4rem;
+
+//BORDER
+$border-top-light: .2rem solid rgba($color-grey-light-2, 1);
+$border-top-dark: .2rem solid rgba($color-grey-dark-1, 1);
+
+$border-bottom-light: .2rem solid rgba($color-grey-light-2, 1);
+$border-bottom-dark: .2rem solid rgba($color-grey-dark-1, 1);

@@ -9,7 +9,7 @@
     color: $color-grey-dark-1;
     display: inline-block;
      padding: 1rem 1rem;
-    box-shadow: 0 1.5rem 6rem rgba($color-black, .2);
+   box-shadow: $box-shadow-md;
     transition: all .3s;
     cursor: pointer;
     
@@ -17,18 +17,18 @@
 }
  
 &:hover{
-    box-shadow: 0 1rem 4rem rgba($color-black,.2);
-  transform: translateY(-1.3rem);
+   box-shadow: $box-shadow-pressed-lg;
+  transform: translateY(1rem);
     &::after{
         outline: none;
- transform: scaleX(1.2) scaleY(1.6);
+ 
     opacity: 0;
     }
 }
 &:active,
 &:focus{
-    transform: translateY(-1.1rem);
-     box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    transform: translateY(1.2rem);
+    box-shadow: $box-shadow-pressed-md;
 }
 
 &::after{
@@ -43,6 +43,11 @@
      z-index: -1;
      transition: all .4s;
 }
+}
+
+.btn-wine{
+     background-color: $color-wine-dark;
+     color: $color-white;
 }
 
 
