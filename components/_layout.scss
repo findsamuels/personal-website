@@ -18,9 +18,7 @@ grid-row: 3 / 4;
               grid-row: 5 / 6;  
                @include col-layout;
 
-               @include respond(phone){
-                       @include center-layout;
-               }
+               
         }
 
 

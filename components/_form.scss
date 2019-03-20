@@ -1,5 +1,9 @@
 .form-section{
  background-image: linear-gradient(to right bottom, $color-grey-light-2, $color-grey-dark-1, $color-wine-light);
+
+ @include respond(tab-port){
+                       @include full-layout;
+               }
 }
 
 .form{
@@ -48,7 +52,7 @@ grid-row: 1 / 2;
               padding-left: 2.5rem;
           }
           @include respond(phone){
-              padding-left: 2rem;
+              padding-left: 3rem;
           }
           
           
