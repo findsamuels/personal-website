@@ -14,6 +14,25 @@
     
 }
 
+
+@mixin full-layout{
+grid-column: full-start / full-end;
+        display: grid;
+        
+grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+       grid-gap: 1.5rem;
+       justify-items: center;
+       align-items: center;
+       text-align: center;
+       width: 100%;
+
+       @include respond(phone){
+justify-content: center;
+               
+       }
+}
+
+
 @mixin center-layout{
 grid-column: center-start / center-end;
         display: grid;

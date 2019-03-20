@@ -1,7 +1,14 @@
  /// ABOUT
  
  
+.about-section{
+        @include respond(phone){
+                @include full-layout;
+                justify-self: center;
+                width: 90%;
 
+        }
+}
         .inspiration{
                 grid-row: 2 / 3;
                 grid-column: 1 / -1;
