@@ -326,7 +326,7 @@ a {
         padding: 1rem; } }
 
 .head {
-  background-image: linear-gradient(to right bottom, #676767, #333333, #676767, #800000);
+  background-image: linear-gradient(to right bottom, #333333, #676767, #676767, #800000);
   background-size: cover;
   background-position: center;
   grid-row: 2 / 3;
