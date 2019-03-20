@@ -15,6 +15,10 @@
 .header{
     &__header-1{
         color: $color-white;
+        font-size: 3rem;
+        &--S-span{
+font-size: 4rem;
+        }
     }
 }
     
