@@ -107,7 +107,7 @@
         grid-column: 1 / 2;
            justify-self: start;
            font-size: $heading-font-big;
-           box-shadow: $box-shadow-pressed-sm;
+           
            border-right: .2rem solid rgba($color-grey-light-2, .9);
               }
     }
@@ -149,7 +149,7 @@ opacity: 0;
     color: $color-white;
     
     @include respond(phone){
-box-shadow: $box-shadow-pressed-sm;
+
         border-left: .2rem solid rgba($color-grey-light-2, .9);
            padding: 1rem;
     }
