@@ -63,8 +63,8 @@
            justify-self: start;
            border-top: .2rem solid rgba($color-grey-light-2, 1);
            
-        //     opacity: 0;
-        //    display: none;
+            opacity: 0;
+            display: none;
              
         }
   
@@ -107,8 +107,7 @@
         grid-column: 1 / 2;
            justify-self: start;
            font-size: $heading-font-big;
-           
-           border-right: .2rem solid rgba($color-grey-light-2, .9);
+          
               }
     }
     
@@ -149,8 +148,8 @@ opacity: 0;
     color: $color-white;
     
     @include respond(phone){
-
-        border-left: .2rem solid rgba($color-grey-light-2, .9);
+        font-size: $heading-font-biggest;
+        
            padding: 1rem;
     }
     
