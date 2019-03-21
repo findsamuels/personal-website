@@ -28,6 +28,7 @@
         grid-column: 1 / 2;
         font-size: $heading-3-font;
     text-transform: uppercase;
+    display: inline;
 
        @include respond(phone) {
             grid-row: 1 / 2;

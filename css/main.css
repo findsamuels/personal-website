@@ -12,7 +12,7 @@ html {
 
 body {
   box-sizing: border-box;
-  color: #333333;
+  color: #666;
   font-weight: 500;
   font-size: 1.2rem;
   margin: 0 auto;
@@ -42,6 +42,7 @@ a {
   letter-spacing: .5rem;
   font-size: 2.5rem;
   font-weight: 700;
+  color: #333333;
   font-family: "Merriweather", serif; }
 
 .brand-logo {
@@ -70,6 +71,7 @@ a {
   font-size: 1.6rem;
   font-weight: 700;
   text-align: center;
+  color: #333333;
   font-family: "Merriweather", serif; }
 
 .heading-4 {
@@ -77,6 +79,7 @@ a {
   font-size: 1.4rem;
   font-weight: 300;
   text-align: center;
+  color: #333333;
   font-family: "Merriweather", serif; }
 
 .about__text {
@@ -157,18 +160,6 @@ a {
   transform: translateY(1.2rem);
   box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.4); }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s; }
-
 .btn-wine {
   background-color: #400000;
   color: #fff; }
@@ -189,7 +180,7 @@ a {
 
 .section-2 {
   grid-row: 4 / 5;
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 1.5rem;
@@ -238,7 +229,8 @@ a {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     font-size: 1.6rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    display: inline; }
     @media only screen and (max-width: 37.5em) {
       .nav__brand {
         grid-row: 1 / 2;
@@ -348,7 +340,8 @@ a {
   justify-items: center;
   align-items: center;
   grid-gap: 1.5rem;
-  width: 100%; }
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
 
 .header {
   display: grid;
@@ -357,6 +350,7 @@ a {
   text-align: center; }
   .header__header-1 {
     color: #fff;
+    display: inline;
     padding: 1.5rem 0; }
     .header__header-1--S-span {
       font-size: 4rem; }
@@ -427,8 +421,7 @@ a {
   .form__subtitle {
     grid-row: 2 / 3;
     color: #fff;
-    text-align: center;
-    text-transform: lowercase; }
+    text-align: center; }
   .form__group-container {
     grid-row: 3 / 4;
     display: grid;
@@ -504,6 +497,9 @@ a {
         .inspiration .introduction__subtitle-box {
           grid-row: 1 / 2;
           grid-column: 1 / 2; } }
+    .inspiration .introduction__subtitle {
+      font-size: 1.4rem;
+      color: #676767; }
     .inspiration .introduction__img {
       grid-row: 1 / 2;
       grid-column: 2 / 3;
@@ -549,15 +545,21 @@ a {
   .inspirations__subtitle {
     grid-row: 3 / 4; }
 
+.skill-section {
+  background-image: linear-gradient(to right top, #333333, #676767, #400000);
+  align-items: center; }
+
 .skills {
   grid-row: 3 / 4;
   display: grid;
   grid-gap: 1.5rem;
   align-items: center;
-  justify-items: center; }
+  justify-items: center;
+  width: 80%; }
   .skills .skills-description {
     grid-row: 1 / 2;
-    text-align: center; }
+    text-align: center;
+    color: #fff; }
   .skills .skills-list {
     grid-row: 2 / 3;
     display: grid;
@@ -627,6 +629,7 @@ a {
         align-items: center;
         margin-top: 1rem;
         padding: 2rem 1.5rem;
+        text-transform: uppercase;
         font-size: 1.2rem; }
         .skills .skills-list .myskills .skill-subtitle__skill1 {
           grid-row: 1 / 2;

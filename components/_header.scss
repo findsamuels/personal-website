@@ -13,6 +13,7 @@
         align-items: center;
         grid-gap: 1.5rem;
         width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     }
 .header{
     display: grid;
@@ -21,7 +22,7 @@
 text-align: center;
 &__header-1{
         color: $color-white;
-        
+        display: inline;
         padding: 1.5rem 0;
         &--S-span{
 font-size: 4rem;
