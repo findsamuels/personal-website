@@ -1,0 +1,11 @@
+A business sells 3D Printers and they want a website.
+
+This is the system I follow:
+
+    Find out if the business has an existing website
+    Find out what their competitors are doing that they aren't doing
+    See if the business has active AdWords campaigns
+    See how the business ranks on Google (SEO)
+    See if the business has social media profiles
+    Find out how much the average 3D printer costs
+    Find out how many printers the business sells every month
