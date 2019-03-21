@@ -70,9 +70,11 @@
             opacity: 0;
             
             transition: all .3s ease-in-out; 
-            &--mobile{
-                
-            }
+            &.is-visible{
+display: block;
+ opacity: 1                               ;
+           height: auto;
+    }
         }
   
     }
@@ -190,11 +192,7 @@ opacity: 0;
             }
 
             
-    .is-visible{
-display: block;
- opacity: 1                               ;
-           height: auto;
-    }
+    
 
 
 
