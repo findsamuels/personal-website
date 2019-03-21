@@ -74,7 +74,7 @@
 display: block;
  opacity: 1                               ;
            height: auto;
-           animation: slidein 3s;
+           animation: slidein 1s;
     }
         }
   
@@ -180,15 +180,13 @@ opacity: 0;
 
             @keyframes slidein{
                 from {
-    height: 0;
-    opacity: 0;
     
-   
+    opacity: .4;
   }
 
   to {
-    height: auto; 
-    opacity: 0;
+    
+    opacity: 1;
   }
             }
 

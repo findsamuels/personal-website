@@ -163,7 +163,7 @@ grid-row: 2 / 3;
                 grid-row: 1 / 2;
                 grid-column: 1 / -1;
                 box-shadow: $box-shadow-pressed-lg;
-                
+                backface-visibility: hidden;
                
                 transition: all .3s;
 
@@ -191,7 +191,7 @@ grid-row: 2 / 3;
                         text-transform: uppercase;
                         color: $color-white;
                         text-align: center;
-                        font-size: 1.5rem;
+                        font-size: $heading-3-font;
                         z-index: 999;
                         opacity: 0;
                         display: none;
@@ -211,7 +211,7 @@ grid-row: 2 / 3;
                         z-index: 10;
                          transform: translateY(50%);
                          width: 80%;
-                         
+                         font-size:$small-font-size;
                          padding: 1rem;
 
                          

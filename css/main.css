@@ -267,7 +267,7 @@ a {
           display: block;
           opacity: 1;
           height: auto;
-          animation: slidein 3s; } }
+          animation: slidein 1s; } }
   @media only screen and (max-width: 37.5em) {
     .nav__list {
       margin-bottom: 1rem;
@@ -326,11 +326,9 @@ a {
 
 @keyframes slidein {
   from {
-    height: 0;
-    opacity: 0; }
+    opacity: .4; }
   to {
-    height: auto;
-    opacity: 0; } }
+    opacity: 1; } }
 
 .head {
   background-image: linear-gradient(to right top, #333333, #676767, #400000);
@@ -549,6 +547,7 @@ a {
         grid-row: 1 / 2;
         grid-column: 1 / -1;
         box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.6);
+        backface-visibility: hidden;
         transition: all .3s; }
         @media only screen and (min-width: 50em) {
           .skills .skills-list .myskills__img:hover {
@@ -566,7 +565,7 @@ a {
         text-transform: uppercase;
         color: #fff;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         z-index: 999;
         opacity: 0;
         display: none;
@@ -582,6 +581,7 @@ a {
         z-index: 10;
         transform: translateY(50%);
         width: 80%;
+        font-size: 1rem;
         padding: 1rem; }
       .skills .skills-list .myskills .skill-subtitle {
         grid-row: 2 / 3;
