@@ -29,3 +29,13 @@
     margin: 2rem 0;
 
 }
+.social-icon{
+    font-size: $heading-1-font;
+color: $color-white;
+padding: .5rem;
+
+@include respond(phone) { 
+            font-size: $heading-font-big;
+           
+              }
+}

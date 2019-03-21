@@ -3,5 +3,34 @@
          
 grid-row: 6 / 7;
         grid-column: full-start / full-end;
+    color: $color-white;
+        background-color: $color-grey-dark-1;
+    width: 100%;
+    display: grid;
+    grid-gap: 1.5rem;
+    padding: 1.5rem 0;
+    @include itemcenter;
+
+    &__box{
+         display: grid;
+    grid-gap: 1.5rem;
+   @include itemcenter;
+    }
+    &__header{
+        grid-row: 1 / 2;
+    }
+    .social{
+grid-row: 2 / 3;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+justify-items: center;
+&__items{
+
+    }
+    }
+    &__copyright{
+grid-row: 3 / 4;
+color: $color-white;
+    }
        
     }

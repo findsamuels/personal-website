@@ -126,6 +126,14 @@ a {
   text-align: center;
   margin: 2rem 0; }
 
+.social-icon {
+  font-size: 2.5rem;
+  color: #fff;
+  padding: .5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .social-icon {
+      font-size: 3rem; } }
+
 .btn, .btn:link, .btn:visited {
   font-size: 1.4rem;
   font-weight: 600;
@@ -295,8 +303,7 @@ a {
     font-size: 2.5rem;
     color: #fff;
     background-color: #333333;
-    padding: .5rem;
-    box-shadow: 1.5 rgba(255, 255, 255, 0.7); }
+    padding: .5rem; }
     @media only screen and (max-width: 37.5em) {
       .nav__icon {
         font-size: 3rem; } }
@@ -362,7 +369,32 @@ a {
 
 .footer {
   grid-row: 6 / 7;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  color: #fff;
+  background-color: #333333;
+  width: 100%;
+  display: grid;
+  grid-gap: 1.5rem;
+  padding: 1.5rem 0;
+  justify-items: center;
+  align-items: center;
+  text-align: center; }
+  .footer__box {
+    display: grid;
+    grid-gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    text-align: center; }
+  .footer__header {
+    grid-row: 1 / 2; }
+  .footer .social {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center; }
+  .footer__copyright {
+    grid-row: 3 / 4;
+    color: #fff; }
 
 .form-section {
   background-image: linear-gradient(to right bottom, #676767, #333333, #800000); }
