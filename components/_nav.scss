@@ -56,7 +56,7 @@
     
 
        @include respond(phone) {
-            display: block;
+            display: none;
             grid-row: 2/ 3;
             grid-column: 1 / -1;
             width: 100%;
@@ -65,18 +65,19 @@
             grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));  
            justify-self: start;
            border-top: .2rem solid rgba($color-grey-light-2, 1);
-           
+          
+           height: 0;
             opacity: 0;
-            display: none;
-             
+            
+            transition: all .3s ease-in-out; 
+            &--mobile{
+                
+            }
         }
   
     }
-    &__displayitem{
-        opacity: 1;
-        display: block;
-        transition: ease-in all 2s;
-    }
+    
+   
 
         
 
@@ -163,3 +164,38 @@ opacity: 0;
 
 
 }
+
+/// EXTRA CLASSES FOR JS
+
+.display-item{
+                height: 100%;
+                display: block;
+                opacity: 1;
+            }
+
+            .slide{
+                animation: slidein 3s;
+            }
+
+            @keyframes slidein{
+                from {
+    height: 0;
+   
+  }
+
+  to {
+    height: auto; 
+    
+  }
+            }
+
+            
+    .is-visible{
+display: block;
+ opacity: 1                               ;
+           height: auto;
+    }
+
+
+
+

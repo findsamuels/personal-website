@@ -247,7 +247,7 @@ a {
     justify-items: center; }
     @media only screen and (max-width: 37.5em) {
       .nav__item {
-        display: block;
+        display: none;
         grid-row: 2/ 3;
         grid-column: 1 / -1;
         width: 100%;
@@ -256,12 +256,9 @@ a {
         grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
         justify-self: start;
         border-top: 0.2rem solid #676767;
+        height: 0;
         opacity: 0;
-        display: none; } }
-  .nav__displayitem {
-    opacity: 1;
-    display: block;
-    transition: ease-in all 2s; }
+        transition: all .3s ease-in-out; } }
   @media only screen and (max-width: 37.5em) {
     .nav__list {
       margin-bottom: 1rem;
@@ -312,6 +309,25 @@ a {
       .nav__toggle {
         font-size: 4rem;
         padding: 1rem; } }
+
+.display-item {
+  height: 100%;
+  display: block;
+  opacity: 1; }
+
+.slide {
+  animation: slidein 3s; }
+
+@keyframes slidein {
+  from {
+    height: 0; }
+  to {
+    height: auto; } }
+
+.is-visible {
+  display: block;
+  opacity: 1;
+  height: auto; }
 
 .head {
   background-image: linear-gradient(to right top, #333333, #676767, #400000);
