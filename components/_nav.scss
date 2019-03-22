@@ -66,16 +66,14 @@
             grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));  
            justify-self: start;
            border-top: .2rem solid rgba($color-grey-light-2, 1);
-          
            height: 0;
             opacity: 0;
             
-            transition: all .3s ease-in-out; 
             &.is-visible{
-display: block;
- opacity: 1                               ;
-           height: auto;
-           animation: slidein 1s;
+                animation: slideup 1s;
+                display: block;     
+                height: auto;     
+                opacity: 1;                     
     }
         }
   
@@ -171,25 +169,11 @@ opacity: 0;
 
 /// EXTRA CLASSES FOR JS
 
-.display-item{
-                height: 100%;
-                display: block;
-                opacity: 1;
-            }
+
 
             
 
-            @keyframes slidein{
-                from {
-    
-    opacity: .4;
-  }
-
-  to {
-    
-    opacity: 1;
-  }
-            }
+           
 
             
     

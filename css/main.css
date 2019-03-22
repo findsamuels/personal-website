@@ -1,3 +1,43 @@
+@keyframes slideup {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20%); }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); } }
+
+@keyframes slidedown {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20%); }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); } }
+
+@keyframes slideleft {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20%); }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); } }
+
+@keyframes slideright {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-20%); }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); } }
+
 html {
   font-size: 62.5%; }
   @media only screen and (max-width: 62.5em) {
@@ -27,12 +67,27 @@ body {
   display: grid;
   width: 100%;
   grid-template-rows: min-content 80vh repeat(6, min-content);
-  grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(8rem, 1fr) [full-end]; }
+  grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
+  position: relative; }
   @media only screen and (max-width: 37.5em) {
     .container {
       grid-template-rows: min-content 50vh repeat(6, min-content);
       justify-content: center;
       overflow-x: hidden; } }
+  .container .arrow-nav {
+    grid-row: 1 / -1;
+    align-self: center;
+    grid-column: col-end 8 / full-end;
+    position: fixed;
+    justify-self: end;
+    z-index: 9999;
+    top: 50%;
+    left: 98%;
+    transform: translate(-50%, 98%);
+    background-color: #666;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 20%; }
 
 a {
   text-decoration: none; }
@@ -261,13 +316,12 @@ a {
         justify-self: start;
         border-top: 0.2rem solid #676767;
         height: 0;
-        opacity: 0;
-        transition: all .3s ease-in-out; }
+        opacity: 0; }
         .nav__item.is-visible {
+          animation: slideup 1s;
           display: block;
-          opacity: 1;
           height: auto;
-          animation: slidein 1s; } }
+          opacity: 1; } }
   @media only screen and (max-width: 37.5em) {
     .nav__list {
       margin-bottom: 1rem;
@@ -317,17 +371,6 @@ a {
       .nav__toggle {
         font-size: 4rem;
         padding: 1rem; } }
-
-.display-item {
-  height: 100%;
-  display: block;
-  opacity: 1; }
-
-@keyframes slidein {
-  from {
-    opacity: .4; }
-  to {
-    opacity: 1; } }
 
 .head {
   background-image: linear-gradient(to right top, #333333, #676767, #400000);

@@ -1,5 +1,8 @@
-@import "mixins";
-@import "variables";
+
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/animation";
+
 @import "base";
 @import "typography";
 @import "utilities";
