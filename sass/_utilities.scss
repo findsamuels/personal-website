@@ -41,10 +41,28 @@ padding: .5rem;
 }
 
 .wineBack{
-   background-color:  $color-wine-dark;
-   color: $color-white;
+   background-color: $color-wine-dark;
+    color: $color-white;
+    animation: slideright 1s;
+
+//    &:hover{
+//        color: $color-grey-dark-1;
+//        background: $color-white;
+//    }
 }
+
+
 .greyBack{
    background-color:  $color-grey-dark-1;
    color: $color-white;
+
+   &:hover{
+       color: $color-grey-dark-1;
+       background: $color-white;
+   }
+}
+
+.hide{
+    display: none;
+    opacity: 0;
 }

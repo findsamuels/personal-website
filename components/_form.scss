@@ -22,7 +22,7 @@ border-bottom: $border-bottom-light;
     }
     &__subtitle{
 grid-row: 2 / 3;
-color: $color-white;
+color: $color-white !important;
 text-align: center;
 
     }

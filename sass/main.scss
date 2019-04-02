@@ -1,19 +1,21 @@
 
+
 @import "abstracts/mixins";
 @import "abstracts/variables";
 @import "abstracts/animation";
 
-@import "base";
-@import "typography";
-@import "utilities";
-
-@import "components/tabs";
 @import "components/button";
+@import "components/tabs";
 @import "components/layout";
 @import "components/nav";
 @import "components/header";
 @import "components/footer";
 @import "components/form";
+
+@import "base";
+@import "typography";
+@import "utilities";
+
 
 @import "pages/home";
 

@@ -6,11 +6,24 @@
 grid-row: 1 / 2;
 display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color: $color-grey-dark-1;
-    }
-    &__head{
-box-shadow: $box-shadow-sm;
 
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1rem;
+    }
+
+    &__head{
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
+
+        
+        &__headingStyle{
+            text-transform: uppercase;
+            font-size: $heading-3-font;
+            text-align: center;
+            padding: .5rem;
+        }
     }
     &__itemsContainer{
 grid-row: 2 / 3;
