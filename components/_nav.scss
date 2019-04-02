@@ -48,7 +48,7 @@
     &__item{
        
         display: grid; 
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(6, 1fr);
             grid-gap: 1rem;
             list-style: none;
             text-transform: uppercase;
@@ -94,7 +94,7 @@
             &__link {
             color: $color-white;
             text-decoration: none;
-            font-size: $heading-3-font;
+            font-size: $heading-4-font;
             @include respond(phone) {
          
             font-family: $heading-font;
