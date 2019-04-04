@@ -1,0 +1,20 @@
+.card-1{
+    box-shadow: $box-shadow-pressed-md;
+    border: .5 solid $color-primary;
+    padding: 1.5rem;
+
+    
+    &__img{
+        grid-row: 1 / 2;
+        width: 100%;
+    }
+
+    &__title{
+        grid-row: 2 / 3;
+text-transform: uppercase;
+    }
+    &__btn{
+grid-row: 3 / 4;
+text-transform: uppercase;
+    }
+}

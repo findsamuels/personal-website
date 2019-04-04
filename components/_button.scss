@@ -12,7 +12,7 @@
    box-shadow: $box-shadow-md;
     transition: all .3s;
     cursor: pointer;
-    
+    margin: 1rem;
    
 }
  
@@ -36,6 +36,11 @@
 .btn-wine{
      background-color: $color-wine-dark;
      color: $color-white;
+}
+.btn-wine-outline{
+     background-color: $color-white;
+     color: $color-wine-dark;
+     border: $border-ex-light;
 }
 
 
