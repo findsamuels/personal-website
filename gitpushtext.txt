@@ -1,3 +1,9 @@
 git add .
 git commit -m "commit 1"
 git push origin master
+/////
+
+steps after creating website.
+
+1) verify website for google using: Google serch console.
+2) Set up google analytics.
