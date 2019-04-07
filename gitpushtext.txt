@@ -5,5 +5,9 @@ git push origin master
 
 steps after creating website.
 
-1) verify website for google using: Google serch console.
-2) Set up google analytics.
+1) verify website for google search engine using: Google search console.
+2) create a site-Map to allow google to crawl your website to google search engine can be done at: https://www.xml-sitemaps.com/
+3) Set up google analytics.
+Google analytics helps you to track visitors visitation and actions on your web-page. (YOUR WEBSITE CAN TAKE UP TO 4 WEEKS TO APPEAR ON GOOGLE)
+4)Set Up google AdWord(Optional). this will definelty bring your website to a very high rank. Highly Recommended. you can pay a minimum of les that 1euros per day 
+

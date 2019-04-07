@@ -43,68 +43,73 @@ var isDisplay;
 
 
 
-tabToggle();
 
-   function tabToggle(){
 
        
+    function clickedTab(tabName){
+
+            return function (item) {
+                tabName.addEventListener('click', function () {
+                switch (true) {
+                    case tabName === funTab:
+                        for (var i = 0; i < item.length; i++) {
+                        hideBusinessItems();
+                        hideCommunityItems();
+                        funTab.classList.add('wineBack');
+                        item[i].style.display = 'block';
+                        allTab.classList.remove('wineBack');
+                        }
+                        break;
+
+                    case tabName === businessTab:
+                        for (var i = 0; i < item.length; i++) {
+                        hideFunItems();
+                        hideCommunityItems();
+                        hideAllTabColor();
+                        item[i].style.display = 'block';
+                        businessTab.classList.add('wineBack');
+                        }
+                        break;
+
+                    case tabName === communityTab:
+                        for (var i = 0; i < item.length; i++) {
+                        hideFunItems();
+                        hideBusinessItems();
+                        hideAllTabColor();
+                        item[i].style.display = 'block';
+                        communityTab.classList.add('wineBack');
+                        }
+                        break;
+
+                    case tabName === allTab:
+                        for (var i = 0; i < item.length; i++) {
+                        item[i].style.display = 'block';
+
+                        allTab.classList.add('wineBack');
+                        businessTab.classList.remove('wineBack');
+                        funTab.classList.remove('wineBack');
+                        communityTab.classList.remove('wineBack');
+                        }
+                        break;
+                        default:
+                        console.log('Error');
+
+                }
+                });
+            }
+        
+
+        
+    }
+
+    clickedTab(funTab)(funItem);
+clickedTab(businessTab)(businessItem);
+       clickedTab(communityTab)(communityItem);
+clickedTab(allTab)(tabItems);
 
 
-       funTab.addEventListener('click', function () {
-           for (var i = 0; i < funItem.length; i++) {
-
-               
-               hideBusinessItems();
-               hideCommunityItems();
-             
-               funTab.classList.add('wineBack');
-               funItem[i].style.display = 'block';
-               allTab.classList.remove('wineBack');
-             
-               
-               
-
-           }
-       });
-
-       businessTab.addEventListener('click', function () {
-           for (var i = 0; i < businessItem.length; i++) {
-
-               
-               hideFunItems();
-               hideCommunityItems();
-               hideAllTabColor();
-               businessItem[i].style.display = 'block';
-               businessTab.classList.add('wineBack'); 
-               
-
-
-           }
-       });
-       communityTab.addEventListener('click', function () {
-           for (var i = 0; i < communityItem.length; i++) {
-
-               
-               hideFunItems();
-             hideBusinessItems();
-               hideAllTabColor();
-               communityItem[i].style.display = 'block';
-               communityTab.classList.add('wineBack');
-                
-           }
-       });
-
-       allTab.addEventListener('click', function () {
-           for (var i = 0; i < tabItems.length; i++) {
-               tabItems[i].style.display = 'block';
-
-               allTab.classList.add('wineBack');
-               businessTab.classList.remove('wineBack'); 
-               funTab.classList.remove('wineBack');
-               communityTab.classList.remove('wineBack'); 
-           }
-       });
-   }
+   
+   
 
    ///////////////////FUNCTIONS DECLARATIONS
    function hideAllTabColor(){
