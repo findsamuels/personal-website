@@ -246,7 +246,7 @@
         </section>
 
          <section class="section-5 form-section U-margin-top-sm">
-             <form action="#" class="form">
+             <form action="#" class="form" name="contact" method="POST" data-netlify="true">
                  <h1 class="form__header heading-2">Contact-Me</h1>
                  <h3 class="form__subtitle heading-4">Work together or Question?. Ill be looking forward to hearing from you.</h3>
 
@@ -254,19 +254,19 @@
 <div class="form__group">
     
     <label for="name" class="form__label">Name*</label>
-    <input type="text" class="form__input" id="name">
+    <input type="text" class="form__input" id="name" required>
 </div>
 
 <div class="form__group">
     
     <label for="email" class="form__label">Email*</label>
-    <input type="text" class="form__input" id="email">
+    <input type="text" class="form__input" id="email" required>
 </div>
 
 <div class="form__group">
     
     <label for="message" class="form__label">Message*</label>
-    <textarea name="message" id="message" cols="30" rows="10" class="form__input"></textarea>
+    <textarea  name="message" id="message" cols="30" rows="10" class="form__input" required></textarea>
 </div>
 <div class="form__group">
     <button class="form__submit btn btn-wine U-margin-bottom-sm">Submit</button>
