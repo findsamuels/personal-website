@@ -1,4 +1,5 @@
 .form-section{
+    grid-row: 7 / 8; 
  background-image: linear-gradient(to right bottom, $color-grey-light-2, $color-grey-dark-1, $color-wine-light);
 
  @include respond(tab-port){

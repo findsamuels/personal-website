@@ -1,0 +1,31 @@
+
+
+
+.success-section{
+
+     background-image: linear-gradient(to right bottom, $color-grey-light-2, $color-grey-dark-1, $color-wine-light);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.section-box{
+    display: grid;
+    align-items: center;
+justify-items: center;
+text-align: center;
+grid-gap: 1.5rem;
+
+padding: 1.5rem;
+    &__header{
+        grid-row: 1 / 2;
+        color: $color-white;
+    }
+    &__text{
+        grid-row: 2 / 3;
+color: $color-white;
+    }
+    &__return{
+       grid-row: 3 / 4;
+
+    }
+}

@@ -115,6 +115,7 @@
     color: #fff; }
 
 .form-section {
+  grid-row: 7 / 8;
   background-image: linear-gradient(to right bottom, #676767, #333333, #800000); }
   @media only screen and (max-width: 50em) {
     .form-section {
@@ -206,8 +207,20 @@
     width: 50%;
     justify-self: center; }
 
-.section-1 {
-  grid-row: 3 / 4;
+.col-section {
+  grid-column: col-start 3 / col-end 6;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; }
+  @media only screen and (max-width: 37.5em) {
+    .col-section {
+      justify-content: center; } }
+
+.center-section {
   grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -217,11 +230,10 @@
   text-align: center;
   width: 100%; }
   @media only screen and (max-width: 37.5em) {
-    .section-1 {
+    .center-section {
       justify-content: center; } }
 
-.section-2 {
-  grid-row: 4 / 5;
+.full-section {
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -231,49 +243,7 @@
   text-align: center;
   width: 100%; }
   @media only screen and (max-width: 37.5em) {
-    .section-2 {
-      justify-content: center; } }
-
-.section-3 {
-  grid-row: 5 / 6;
-  grid-column: center-start / center-end;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 1.5rem;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  width: 100%; }
-  @media only screen and (max-width: 37.5em) {
-    .section-3 {
-      justify-content: center; } }
-
-.section-4 {
-  grid-row: 6 / 7;
-  grid-column: full-start / full-end;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 1.5rem;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  width: 100%; }
-  @media only screen and (max-width: 37.5em) {
-    .section-4 {
-      justify-content: center; } }
-
-.section-5 {
-  grid-row: 7 / 8;
-  grid-column: full-start / full-end;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 1.5rem;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  width: 100%; }
-  @media only screen and (max-width: 37.5em) {
-    .section-5 {
+    .full-section {
       justify-content: center; } }
 
 .nav {
@@ -590,18 +560,20 @@ a {
 .show {
   display: block; }
 
-@media only screen and (max-width: 37.5em) {
-  .about-section {
-    grid-column: full-start / full-end;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 1.5rem;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    justify-self: center;
-    width: 90%; } }
+.about-section {
+  grid-row: 3 / 4; }
+  @media only screen and (max-width: 37.5em) {
+    .about-section {
+      grid-column: full-start / full-end;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      grid-gap: 1.5rem;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      justify-self: center;
+      width: 90%; } }
   @media only screen and (max-width: 37.5em) and (max-width: 37.5em) {
     .about-section {
       justify-content: center; } }
@@ -686,6 +658,7 @@ a {
     grid-row: 3 / 4; }
 
 .skill-section {
+  grid-row: 4 / 5;
   background-image: linear-gradient(to right top, #333333, #676767, #400000);
   align-items: center; }
 
@@ -784,7 +757,35 @@ a {
           grid-row: 2 / 3;
           grid-column: 2 / 3; }
 
+.portfolio-section {
+  grid-row: 5 / 6; }
+
 .portfolio {
   display: grid;
   grid-gap: 1.5rem;
   justify-items: center; }
+
+.hobby-section {
+  grid-row: 6 / 7; }
+
+.success-section {
+  background-image: linear-gradient(to right bottom, #676767, #333333, #800000);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
+
+.section-box {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  grid-gap: 1.5rem;
+  padding: 1.5rem; }
+  .section-box__header {
+    grid-row: 1 / 2;
+    color: #fff; }
+  .section-box__text {
+    grid-row: 2 / 3;
+    color: #fff; }
+  .section-box__return {
+    grid-row: 3 / 4; }
