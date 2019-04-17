@@ -24,7 +24,7 @@
     
 </head>
 <body>
-    <div class="container">
+    <div class="container" id = 'home'>
         <a class = "arrow-nav" href="#"><i class="fas fa-arrow-up social-icon "></i></a> 
         <nav class="nav">
             <a href="#" class="nav__brand">Find<span class="nav__brand--S-span S-span">S</span>amuel</a>
@@ -39,12 +39,12 @@
 
             <ul class="nav__item  ">
             
-                <li class="nav__list"><a href="#" class="nav__link" id = 'home'>Home </a></li>
-                <li class="nav__list"><a href="#" class="nav__link" id = 'about'>About</a></li>
-                <li class="nav__list"><a href="#" class="nav__link" id = 'skills'>Skills</a></li>
-                <li class="nav__list"><a href="#" class="nav__link" id = 'portfolio'>Portfolio</a></li>
-                <li class="nav__list"><a href="#" class="nav__link" id = 'hobbies'>Hobbies</a></li>
-                <li class="nav__list"><a href="#" class="nav__link id = 'contact'">Contact</a></li>
+                <li class="nav__list" data-block='home' >home</li>
+                <li class="nav__list" data-block='about-section'>About</li>
+                <li class="nav__list" data-block='skill-section'>skills</li>
+                <li class="nav__list" data-block='portfolio-section'>portfolio</li>
+                <li class="nav__list" data-block='hobby-section'>hobby</li>
+                <li class="nav__list" data-block='form-section'>contact</li>
             </ul>
           </nav>
         <div class="head">
@@ -56,7 +56,7 @@
         </div>
 
         
-        <section class="center-section about-section U-margin-top-sm">
+        <section class="center-section  U-margin-top-sm" id ='about-section'>
            
                
             
@@ -110,7 +110,7 @@
                     </div>
 
         </section>
-         <section class="full-section skill-section U-margin-top-sm ">
+         <section class="full-section  U-margin-top-sm" id ='skill-section'>
 <div class="skills U-margin-bottom-md">
 
     
@@ -157,7 +157,7 @@
 
 </div>
          </section>
-         <section class=" center-section portfolio-section  U-margin-top-sm">
+         <section class=" center-section   U-margin-top-sm" id ='portfolio-section'>
             <div class="portfolio">
                 <h3 class="content-heading heading-1">portfolio</h3>
                 <div class="tabs-col-4">
@@ -239,13 +239,13 @@
 
          </section>
 
-        <section class=" full-section hobby-section  U-margin-top-sm">
+        <section class=" full-section U-margin-top-sm" id = 'hobby-section'>
             <div class="hobby">
                 <h3 class="content-heading heading-1">Hobbies</h3>
             </div>
         </section>
 
-         <section class="full-section form-section U-margin-top-sm">
+         <section class="full-section  U-margin-top-sm" id = 'form-section' >
              <form action="success.html" class="form" name="contact" method="POST" data-netlify="true">
                  <h1 class="form__header heading-2">Contact-Me</h1>
                  <h3 class="form__subtitle heading-4">Work together or Question?. Just fill out this little form.</h3>

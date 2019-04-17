@@ -1,7 +1,7 @@
  /// ABOUT
  
  
-.about-section{
+#about-section{
         grid-row: 3 / 4;
         @include respond(phone){
                 @include full-layout;
@@ -125,7 +125,7 @@ grid-row: 2 / 3;
 
         ///SKILLS
 
-        .skill-section{
+        #skill-section{
                 grid-row: 4 / 5;
                  background-image: linear-gradient(to right top, $color-grey-dark-1,$color-grey-light-2, $color-wine-dark);
         align-items: center;
@@ -287,7 +287,7 @@ grid-row: 2 / 3;
 
         }
 
-        .portfolio-section{
+        #portfolio-section{
                 grid-row: 5 / 6;
 
         }
@@ -298,6 +298,6 @@ grid-row: 2 / 3;
         }
 //Hobby Section
 
-        .hobby-section{
+        #hobby-section{
                 grid-row: 6 / 7;  
         }

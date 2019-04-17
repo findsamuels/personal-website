@@ -51,6 +51,10 @@ padding: .5rem;
 //    }
 }
 
+.animateright{
+    animation: slideright 1s;
+}
+
 
 .greyBack{
    background-color:  $color-grey-dark-1;

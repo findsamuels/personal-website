@@ -1,191 +1,138 @@
+// import { setTimeout } from "timers";
 
-// alert("Loaded!");
+const toggleNav = document.querySelector('.nav__togglecontainer');
+const itemNav = document.querySelector('.nav__item');
 
+const tabAll = document.querySelector('#all');
+const tabfun = document.querySelector('#fun');
+const tabcommunity = document.querySelector('#community');
+const tabbusiness = document.querySelector('#business');
+const itemAll = document.querySelectorAll('.card-1');
+const itemfun = document.querySelectorAll('.fun-content');
+const itemcommunity = document.querySelectorAll('.community-content');
+const itembusiness = document.querySelectorAll('.business-content');
 
+number  = [1,2,3,4,5,6,7,8,9,0]
+const skillSection = document.querySelector('.skill-section');
+const aboutSection = document.querySelector('.about-section');
 
-
-
-
-
-    
-  
-//     var allTab = document.querySelector('#all');
-//     var funTab = document.querySelector('#fun');
-//     var communityTab = document.querySelector('#community');
-//     var businessTab = document.querySelector('#business');
-
-//     var funItem = document.querySelectorAll('.fun-content');
-
-//     var communityItem = document.querySelectorAll('.community-content');
-//     var businessItem = document.querySelectorAll('.business-content');
-
-//     var tabItems = document.querySelectorAll('.card-1');
-
-// var tabhead = document.querySelectorAll('.tabs-col-4__head');
-//     var tabHeadText = document.querySelectorAll('tabs-col-4__head__headingStyle');
-
-
-
-
+const navScroll = () =>{
+document.querySelectorAll('.nav__list').forEach((elem) => {
+    elem.addEventListener('click', (event) =>{
+        const block = event.target.dataset.block;
+        console.log(block);
+         const toBlock = document.getElementById(block); 
+        toBlock.scrollIntoView({ behavior: 'smooth' });
         
-    
+});
+});
+}
 
- 
-        var AppUI  = (function(){
-////// Initialise App for UI
-    
-//////// Use initialised Dom for event
-           
-            var getDOM = {
-               toggler: '.nav__togglecontainer',
-                items: '.nav__item',
-                allTab: '#all',
-                funTab: '#fun',
-                communityTab: '#community',
-                businessTab: '#business',
-                funItem: '.fun-content',
-                communityItem: '.community-content',
-                businessItem: '.business-content',
-                tabItems: '.card-1',
-                tabHead: '.tabs-col-4__head',
-                tabHeadText: 'tabs-col-4__head__headingStyle',
-            }
-
-            return{
-                returnGetDom: function(){
-                    return getDOM;
-                   
-                }
-        
-            };
-
-        })();
+navScroll();
 
 
+//////////////////////////////Nav Class////////////////////////////////////
+class NavClass {
+    constructor(navToggler, navItems){
+        this.navToggler = navToggler;
+        this.navItems = navItems;
+    };
 
-///App Controller or work calculation
-        var AppController = (function(){
+    navAnimation(){
+        this.navToggler.addEventListener("click", () => {
+            this.navItems.classList.toggle("is-visible");
+        });
+    };
 
-        })();
-
-/////////////////////////////////////////////////////////////////////////////////////
-        /////Controller
-        var Controller = (function(UIApp, ControllerApp){
-
-        var initialiseEvent = function(){
-            var handleUI = UIApp.returnGetDom();
-
-            var toggleNavBar = document.querySelector(handleUI.toggler);
-            var showNav = document.querySelector(handleUI.items);
-
-            var navfunTab = document.querySelector(handleUI.funTab);
-            var navbusinessTab = document.querySelector(handleUI.businessTab);
-            var navcommunityTab = document.querySelector(handleUI.communityTab);
-            var navallTab = document.querySelector(handleUI.allTab);
-
-            var navfunItem = document.querySelectorAll(handleUI.funItem);
-            var navbusinessItem = document.querySelectorAll(handleUI.businessItem);
-            var navcommunityItem = document.querySelectorAll(handleUI.communityItem);
-            var navallItem = document.querySelectorAll(handleUI.tabItems);
-
-//////////////////////////////////dom declaration
-           
-
-           
-            toggleNavBar.addEventListener("click", toggleNav);
-            navfunTab.addEventListener('click', toggleFunTab);
-            navbusinessTab.addEventListener('click', toggleBusinessTab);
-            navcommunityTab.addEventListener('click', toggleCommunityTab);
-            navallTab.addEventListener('click', toggleAllTab);
-                 
-//////////////////////////////////EVENT LISTENER
-            function toggleNav() {
-                showNav.classList.toggle("is-visible");
-                console.log('hello');
-            }
-                function toggleFunTab(){
-                    for (var i = 0; i < navfunItem.length; i++) {
-                        hideBusinessItems();
-                        hideCommunityItems();
-                        navfunTab.classList.add('wineBack');
-                        navfunItem[i].style.display = 'block';
-                        navallTab.classList.remove('wineBack');
-                    }
-                }
-            function toggleBusinessTab() {
-                for (var i = 0; i < navbusinessItem.length; i++) {
-                    hideFunItems();
-                    hideCommunityItems();
-                    hideAllTabColor();
-                    navbusinessItem[i].style.display = 'block';
-                    navbusinessTab.classList.add('wineBack');
-                }
-            }
-            function toggleCommunityTab() {
-                for (var i = 0; i < navcommunityItem.length; i++) {
-                    hideFunItems();
-                    hideBusinessItems();
-                    hideAllTabColor();
-                    navcommunityItem[i].style.display = 'block';
-                    navcommunityTab.classList.add('wineBack');
-                }
-            }
-            function toggleAllTab() {
-                for (var i = 0; i < navallItem.length; i++) {
-                    navallItem[i].style.display = 'block';
-
-                    navallTab.classList.add('wineBack');
-                    navbusinessTab.classList.remove('wineBack');
-                    navfunTab.classList.remove('wineBack');
-                    navcommunityTab.classList.remove('wineBack');
-                }
-            }
-            
-
-     
-            function hideAllTabColor() {
-        navallTab.classList.remove('wineBack');
+};
+const containNav = new NavClass(toggleNav, itemNav);
+containNav.navAnimation();
+//////////////////////////////Tab Class//////////////////////////////////
+class TabClass{
+    constructor(allTab,funTab,communityTab,businessTab,allItems,funItems,cummunityItems,businessItems){
+        this.allTab = allTab;
+        this.funTab = funTab;
+        this.communityTab = communityTab;
+        this.businessTab = businessTab;
+        this.allItems = allItems;
+        this.funItems = funItems;
+        this.cummunityItems = cummunityItems;
+        this.businessItems = businessItems;  
     }
-
-    function hideBusinessItems() {
-        for (var i = 0; i < navbusinessItem.length; i++) {
-            navbusinessItem[i].style.display = 'none';
-            navbusinessTab.classList.remove('wineBack');
+    controlTabs(){
+         const hidefun = () => {
+            for(let myfunitems of this.funItems){
+                myfunitems.style.display = 'none';
+                this.funTab.classList.remove('wineBack');
+            }
         }
-    }
-    function hideFunItems() {
-        for (var i = 0; i < navfunItem.length; i++) {
-            navfunItem[i].style.display = 'none';
-            navfunTab.classList.remove('wineBack');
-
+         const hidebusiness = () => {
+            for (let myBusinessItems of this.businessItems) {
+                myBusinessItems.style.display = 'none';
+                this.businessTab.classList.remove('wineBack');
+            }
         }
-    }
-    function hideCommunityItems() {
-        for (var i = 0; i < navcommunityItem.length; i++) {
-            navcommunityItem[i].style.display = 'none';
-            navcommunityTab.classList.remove('wineBack');
+
+        const hidecommunity = () =>{
+            for (let myCommunityItems of this.cummunityItems) {
+                myCommunityItems.style.display = 'none';
+                this.communityTab.classList.remove('wineBack');
+            }
         }
-    }
 
-            
+        this.allTab.addEventListener('click', () => {
+            for (var i = 0; i < this.allItems.length; i++) {
+                this.allItems[i].style.display = 'block';
+
+                this.allTab.classList.add('wineBack');
+                this.businessTab.classList.remove('wineBack');
+                this.funTab.classList.remove('wineBack');
+                this.communityTab.classList.remove('wineBack');
+            }
+        });
 
 
-
-
-        }
-            
-//////////////////////////RETURN DOM///////////////////////////////////////////////
-            return{
-                init: function(){
-                    initialiseEvent(); 
-                },
+        this.funTab.addEventListener('click', () => {
+            for (var i = 0; i < this.funItems.length; i++) {
+                this.funTab.classList.add('wineBack');
+                this.funItems[i].style.display = 'block';
+                this.allTab.classList.remove('wineBack'); 
+                hidecommunity();
+                hidebusiness();
+            }
+        });
+        this.businessTab.addEventListener('click', () => {
+            for (var i = 0; i < this.businessItems.length; i++) {
                 
+                this.businessItems[i].style.display = 'block';
+                this.businessTab.classList.add('wineBack');
+                this.allTab.classList.remove('wineBack'); 
+                hidefun();
+                hidecommunity();
             }
+        });
 
-        })(AppUI, AppController);
+        
 
+        this.communityTab.addEventListener('click', () => {
+            for (var i = 0; i < this.cummunityItems.length; i++) {
+                
+                this.cummunityItems[i].style.display = 'block';
+                this.communityTab.classList.add('wineBack');
+                this.allTab.classList.remove('wineBack'); 
+                hidefun();
+                hidebusiness();
+            }
+        });
 
-Controller.init();
+    }
+
+}
+
+const containTabs = new TabClass(tabAll,tabfun,tabcommunity,tabbusiness,itemAll,itemfun,itemcommunity,itembusiness);
+
+containTabs.controlTabs();
+
 
 
 
