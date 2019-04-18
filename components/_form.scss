@@ -9,7 +9,7 @@
 .form{
     
     display: grid;
-    grid-gap: 5rem;
+    grid-gap: 1.5rem;
     @include itemcenter;
     color: $color-white;
   padding: 1.5rem 0;
@@ -17,6 +17,7 @@
     &__header{
 grid-row: 1 / 2;
 width: 100%;
+align-self: center;
 border-bottom: $border-bottom-light;
 
     }

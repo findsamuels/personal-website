@@ -22,10 +22,21 @@ document.querySelectorAll('.nav__list').forEach((elem) => {
         const block = event.target.dataset.block;
         console.log(block);
          const toBlock = document.getElementById(block); 
-        toBlock.scrollIntoView({ behavior: 'smooth' });
+        toBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => {
+            window.scrollBy(0, -45);
+        }, 500);
+  
+});
+});
+
+    document.querySelector('.arrowScroll').addEventListener('click', (event) =>{
         
-});
-});
+        const block = event.target.dataset.block;
+        console.log(block);
+        toblock2 = document.getElementById(block);
+        toblock2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
 }
 
 navScroll();

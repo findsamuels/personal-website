@@ -47,7 +47,7 @@ position: relative;
          overflow-x: hidden;
     }
 
-    .arrow-nav{
+    .arrowScroll{
         grid-row: 1 / -1;
         align-self: center;
         grid-column: col-end 8 / full-end;
@@ -55,13 +55,17 @@ position: relative;
         justify-self: end;
         z-index: 9999;
         top: 50%;
-        left: 98%;
+        left: 99%;
         transform: translate(-50%, 98%);
         background-color: $color-primary;
         color: $color-white;
         padding: 1rem;
         border-radius: 20%;
+        cursor: pointer;
         
+        @include respond(phone){
+             left: 98%;
+        }
     }
 }
     
