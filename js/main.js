@@ -1,5 +1,7 @@
 // import { setTimeout } from "timers";
 
+
+
 const toggleNav = document.querySelector('.nav__togglecontainer');
 const itemNav = document.querySelector('.nav__item');
 
@@ -22,7 +24,17 @@ document.querySelectorAll('.nav__list').forEach((elem) => {
         const block = event.target.dataset.block;
         console.log(block);
          const toBlock = document.getElementById(block); 
-        toBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // toBlock.scrollIntoView({ block: "start"});
+
+        window.scrollTo({
+            top: toBlock.offsetTop,
+            left: 0,
+            
+
+            
+        });
+
+
         setTimeout(() => {
             window.scrollBy(0, -45);
         }, 500);
@@ -36,7 +48,7 @@ document.querySelectorAll('.nav__list').forEach((elem) => {
         const block = event.target.dataset.block;
         console.log(block);
         toblock2 = document.getElementById(block);
-        toblock2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        toblock2.scrollIntoView({ block: 'start' });
     });
 }
 
