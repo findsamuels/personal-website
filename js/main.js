@@ -26,6 +26,7 @@ document.querySelectorAll('.nav__list').forEach((elem) => {
         setTimeout(() => {
             window.scrollBy(0, -45);
         }, 500);
+        itemNav.classList.toggle('is-visible');
   
 });
 });
