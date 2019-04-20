@@ -1,5 +1,5 @@
 .nav{
-     background-color: $color-grey-dark-1;
+     background-color: $color-grey-dark-1 transparent;
     width: 100%;
      grid-column: full-start / full-end; 
      grid-row: 1 / 2;
@@ -7,15 +7,18 @@
         grid-template-columns: repeat(3, 1fr);  
         justify-items: center;
         align-items: center;
-        box-shadow: $box-shadow-pressed-md;
+          font-size: $default-font-size;
+          
         z-index: 1000;
         grid-gap: 1.5rem;
         position: fixed;
+        @include respond(min-tab-port){
+            
+        }
 @include respond(phone) {
-    
+    background-color: $color-grey-dark-1;
   grid-template-columns: repeat(3, 1fr); 
-  
-  border-bottom: solid .2rem rgba($color-grey-light-2, .8);     
+   box-shadow: $box-shadow-pressed-md;   
   padding: .5rem;
  
         }
@@ -87,12 +90,11 @@
 
             color: $color-white;
             text-decoration: none;
-            font-size: $heading-4-font;
             cursor: pointer;
+            &:hover{
+                border-bottom: $border-bottom-ex-light; 
+            }
             @include respond(phone) {
-         
-           
-
         }
 
 
@@ -103,16 +105,16 @@
         }
 
     }
-            &__link {
-            color: $color-white;
-            text-decoration: none;
-            font-size: $heading-4-font;
-            @include respond(phone) {
+        //     &__link {
+        //     color: $color-white;
+        //     text-decoration: none;
+        //     font-size: $heading-4-font;
+        //     @include respond(phone) {
          
-            font-family: $heading-font;
+        //     font-family: $heading-font;
 
-        }
-        }
+        // }
+        // }
         
 &__social{
             grid-row: 1 / 2;

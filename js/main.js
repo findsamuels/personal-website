@@ -4,6 +4,7 @@
 
 const toggleNav = document.querySelector('.nav__togglecontainer');
 const itemNav = document.querySelector('.nav__item');
+const navContain = document.querySelector('.nav');
 
 const tabAll = document.querySelector('#all');
 const tabfun = document.querySelector('#fun');
@@ -14,9 +15,6 @@ const itemfun = document.querySelectorAll('.fun-content');
 const itemcommunity = document.querySelectorAll('.community-content');
 const itembusiness = document.querySelectorAll('.business-content');
 
-number  = [1,2,3,4,5,6,7,8,9,0]
-const skillSection = document.querySelector('.skill-section');
-const aboutSection = document.querySelector('.about-section');
 
 const navScroll = () =>{
 document.querySelectorAll('.nav__list').forEach((elem) => {
@@ -29,9 +27,7 @@ document.querySelectorAll('.nav__list').forEach((elem) => {
         window.scrollTo({
             top: toBlock.offsetTop,
             left: 0,
-            
-
-            
+         
         });
 
 
@@ -54,10 +50,68 @@ document.querySelectorAll('.nav__list').forEach((elem) => {
 
 navScroll();
 
+let showInspiration = document.querySelectorAll('.inspiration-box');
+let showSkills = document.querySelectorAll('.skills-list');
+let showPortfolio = document.querySelectorAll('.portfolio');
+
+const allDiv = [...showInspiration, ...showSkills, ...showPortfolio];
+console.log(allDiv);
+
+const scrollArrays = Array.from(allDiv);
+
+
+
+
+scrollPos = 0;
+
+windowY = window.windowY;
+const prevScrollposition = window.pageYOffset;
+window.addEventListener('scroll', () =>{
+    for (let el of scrollArrays) {
+        
+        const currentScrollPosition = window.pageYOffset;
+        if (currentScrollPosition > prevScrollposition){
+
+            console.log("right");
+            const scrollThis = divScroll => {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve(el.classList.add('show'));
+
+                    }, 1000, divScroll);
+                });
+            };
+
+            async function getscrolls() {
+                const myScroll = await scrollThis();
+                return myScroll;
+            }
+            getscrolls();
+        // } else if (prevScrollposition > currentScrollPosition) {
+
+        //     setTimeout(() => {
+        //         console.log('removed');
+        //         el.classList.remove('show');
+
+        //     }, 1000);
+           
+        // }
+        }
+     }
+});
+   
+       windowY = scrollPos;
+    
+    
+    
+    
+
+
 
 //////////////////////////////Nav Class////////////////////////////////////
 class NavClass {
-    constructor(navToggler, navItems){
+    constructor(navContainer,navToggler, navItems){
+        this.navContainer = navContainer;
         this.navToggler = navToggler;
         this.navItems = navItems;
     };
@@ -66,10 +120,24 @@ class NavClass {
         this.navToggler.addEventListener("click", () => {
             this.navItems.classList.toggle("is-visible");
         });
+        const prevScrollpos = window.pageYOffset;
+        window.addEventListener('scroll', () => {
+            const currentScrollPos = window.pageYOffset;
+            if (currentScrollPos > prevScrollpos){
+            
+                this.navContainer.classList.add('navScroll');
+            } else {
+                
+                this.navContainer.classList.remove('navScroll');
+            }
+            
+        })
     };
 
+
+
 };
-const containNav = new NavClass(toggleNav, itemNav);
+const containNav = new NavClass(navContain,toggleNav, itemNav);
 containNav.navAnimation();
 //////////////////////////////Tab Class//////////////////////////////////
 class TabClass{

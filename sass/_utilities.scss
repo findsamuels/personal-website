@@ -67,10 +67,21 @@ padding: .5rem;
 }
 
 .hide{
+    animation: slideleft 1s;
     display: none;
     opacity: 0;
 }
 .show{
-    display: block;
+    display: block;     
+                height: auto;     
+                  animation: slideright 1s ease-in;
+                  opacity: 1;
     
+}
+.navScroll{
+         box-shadow: $box-shadow-pressed-md;
+        border-bottom: solid .2rem rgba($color-grey-light-2, .8);  
+        background-color: $color-grey-dark-1 ;
+        font-size: $heading-4-font !important;
+        
 }

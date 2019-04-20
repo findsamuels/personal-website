@@ -11,6 +11,9 @@
     @if $breakpoint == big-desktop {
         @media only screen and (min-width:  $bp-largest) { @content };    //1800
     }
+     @if $breakpoint == min-tab-port {
+        @media only screen and (min-width:  $bp-medium) { @content };    //1800
+    }
     
 }
 

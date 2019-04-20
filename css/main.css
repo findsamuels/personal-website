@@ -32,7 +32,7 @@
   from {
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-20%); }
+    transform: translateX(-40%); }
   to {
     opacity: 1;
     visibility: visible;
@@ -248,7 +248,7 @@
       justify-content: center; } }
 
 .nav {
-  background-color: #333333;
+  background-color: #333333 transparent;
   width: 100%;
   grid-column: full-start / full-end;
   grid-row: 1 / 2;
@@ -256,14 +256,15 @@
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
-  box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
+  font-size: 1.2rem;
   z-index: 1000;
   grid-gap: 1.5rem;
   position: fixed; }
   @media only screen and (max-width: 37.5em) {
     .nav {
+      background-color: #333333;
       grid-template-columns: repeat(3, 1fr);
-      border-bottom: solid 0.2rem rgba(103, 103, 103, 0.8);
+      box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
       padding: .5rem; } }
   .nav__brand {
     color: #fff;
@@ -311,19 +312,13 @@
   .nav__list {
     color: #fff;
     text-decoration: none;
-    font-size: 1.4rem;
     cursor: pointer; }
+    .nav__list:hover {
+      border-bottom: 0.1rem solid rgba(103, 103, 103, 0.5); }
     @media only screen and (max-width: 37.5em) {
       .nav__list {
         margin-bottom: 1rem;
         padding: .4rem 0;
-        font-family: "Merriweather", serif; } }
-  .nav__link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.4rem; }
-    @media only screen and (max-width: 37.5em) {
-      .nav__link {
         font-family: "Merriweather", serif; } }
   .nav__social {
     grid-row: 1 / 2;
@@ -569,11 +564,21 @@ a {
     background: #fff; }
 
 .hide {
+  animation: slideleft 1s;
   display: none;
   opacity: 0; }
 
 .show {
-  display: block; }
+  display: block;
+  height: auto;
+  animation: slideright 1s ease-in;
+  opacity: 1; }
+
+.navScroll {
+  box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
+  border-bottom: solid 0.2rem rgba(103, 103, 103, 0.8);
+  background-color: #333333;
+  font-size: 1.4rem !important; }
 
 #about-section {
   grid-row: 3 / 4; }
