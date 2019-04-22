@@ -1,6 +1,7 @@
 // import { setTimeout } from "timers";
 
 
+// AOS.init();
 
 const toggleNav = document.querySelector('.nav__togglecontainer');
 const itemNav = document.querySelector('.nav__item');
@@ -16,6 +17,7 @@ const itemcommunity = document.querySelectorAll('.community-content');
 const itembusiness = document.querySelectorAll('.business-content');
 
 
+
 const navScroll = () =>{
 document.querySelectorAll('.nav__list').forEach((elem) => {
     elem.addEventListener('click', (event) =>{
@@ -29,7 +31,6 @@ document.querySelectorAll('.nav__list').forEach((elem) => {
             left: 0,
          
         });
-
 
         setTimeout(() => {
             window.scrollBy(0, -45);
@@ -51,62 +52,49 @@ document.querySelectorAll('.nav__list').forEach((elem) => {
 navScroll();
 
 let showInspiration = document.querySelectorAll('.inspiration-box');
-let showSkills = document.querySelectorAll('.skills-list');
+let showSkills = document.querySelectorAll('.skills');
 let showPortfolio = document.querySelectorAll('.portfolio');
 
-const allDiv = [...showInspiration, ...showSkills, ...showPortfolio];
-console.log(allDiv);
-
-const scrollArrays = Array.from(allDiv);
-
+//////////////////////////////SKILL- CLASS////////////////////////////////////
+const skillList = Array.from(document.querySelectorAll('.skills-list__title'));
+const skilldesc = document.querySelectorAll('.skill-desc');
 
 
 
-scrollPos = 0;
+console.log(skilldesc);
+class SkillClass{
+    constructor(mySkillLists, mySkillDescription){
+        this.mySkillLists = mySkillLists;
+        this.mySkillDescription = mySkillDescription;
+    }
 
-windowY = window.windowY;
-const prevScrollposition = window.pageYOffset;
-window.addEventListener('scroll', () =>{
-    for (let el of scrollArrays) {
+    showskilldescription(){
+        const myskilldesc = this.mySkillDescription;
+
         
-        const currentScrollPosition = window.pageYOffset;
-        if (currentScrollPosition > prevScrollposition){
-
-            console.log("right");
-            const scrollThis = divScroll => {
-                return new Promise((resolve, reject) => {
-                    setTimeout(() => {
-                        resolve(el.classList.add('show'));
-
-                    }, 1000, divScroll);
-                });
-            };
-
-            async function getscrolls() {
-                const myScroll = await scrollThis();
-                return myScroll;
-            }
-            getscrolls();
-        // } else if (prevScrollposition > currentScrollPosition) {
-
-        //     setTimeout(() => {
-        //         console.log('removed');
-        //         el.classList.remove('show');
-
-        //     }, 1000);
+  for(let el1 of this.mySkillLists){
+    el1.addEventListener('click' , (event) =>{
+        for (let el2 of myskilldesc ){
            
-        // }
-        }
-     }
-});
-   
-       windowY = scrollPos;
-    
-    
-    
+                el2.classList.toggle('show');
+            
+          
+            // el2.style.display = 'block';
     
 
+}
+     
+  
+    });
+  }
+    }
+}
+const skilllist1 = new SkillClass(skillList, skilldesc);
 
+const skillControl = function(s){
+s.showskilldescription();
+}
+skillControl(skilllist1);
 
 //////////////////////////////Nav Class////////////////////////////////////
 class NavClass {
@@ -123,7 +111,7 @@ class NavClass {
         const prevScrollpos = window.pageYOffset;
         window.addEventListener('scroll', () => {
             const currentScrollPos = window.pageYOffset;
-            if (currentScrollPos > prevScrollpos){
+            if (currentScrollPos > prevScrollpos  || currentScrollPos){
             
                 this.navContainer.classList.add('navScroll');
             } else {

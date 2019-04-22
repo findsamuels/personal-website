@@ -86,7 +86,7 @@
     text-transform: uppercase; }
 
 .footer {
-  grid-row: 8 / 9;
+  grid-row: 7 / 8;
   grid-column: full-start / full-end;
   color: #fff;
   background-color: #333333;
@@ -115,7 +115,7 @@
     color: #fff; }
 
 #form-section {
-  grid-row: 7 / 8;
+  grid-row: 6 / 7;
   background-image: linear-gradient(to right bottom, #676767, #333333, #800000); }
   @media only screen and (max-width: 50em) {
     #form-section {
@@ -180,7 +180,7 @@
   background-image: linear-gradient(to right top, #333333, #676767, #400000);
   background-size: cover;
   background-position: center;
-  grid-row: 2 / 3;
+  grid-row: 1 / 2;
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -285,7 +285,7 @@
           font-size: 3rem; } }
   .nav__item {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 1rem;
     list-style: none;
     text-transform: uppercase;
@@ -418,12 +418,12 @@ body {
 .container {
   display: grid;
   width: 100%;
-  grid-template-rows: min-content 80vh repeat(7, min-content);
+  grid-template-rows: 80vh repeat(7, min-content);
   grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
   position: relative; }
   @media only screen and (max-width: 37.5em) {
     .container {
-      grid-template-rows: min-content 50vh repeat(6, min-content);
+      grid-template-rows: 50vh repeat(6, min-content);
       justify-content: center;
       overflow-x: hidden; } }
   .container .arrowScroll {
@@ -496,22 +496,6 @@ a {
 .about__text {
   text-align: center; }
 
-.expert {
-  border-left: solid 0.3rem #008000;
-  border-right: solid 0.3rem #008000;
-  box-shadow: 0 0 1.5rem #008000;
-  font-style: italic;
-  margin-left: 1.5rem;
-  padding: .4rem; }
-
-.advanced {
-  border-left: solid 0.3rem #ff8000;
-  border-right: solid 0.3rem #ff8000;
-  font-style: italic;
-  box-shadow: 0 0 1.5rem #ff8000;
-  margin-left: 1.5rem;
-  padding: .4rem; }
-
 .U-margin-bottom-lg {
   margin-bottom: 4rem; }
 
@@ -569,10 +553,9 @@ a {
   opacity: 0; }
 
 .show {
-  display: block;
-  height: auto;
-  animation: slideright 1s ease-in;
-  opacity: 1; }
+  display: block !important;
+  opacity: 1;
+  animation: slideup .8s; }
 
 .navScroll {
   box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
@@ -694,88 +677,41 @@ a {
     text-align: center;
     color: #fff;
     align-self: center;
+    border-bottom: 0.2rem solid #676767;
     margin-bottom: 4rem; }
   .skills .skills-list {
     grid-row: 2 / 3;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.5rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 2.5rem;
     justify-items: center; }
     @media only screen and (max-width: 37.5em) {
       .skills .skills-list {
-        grid-template-columns: 1fr; } }
-    .skills .skills-list .myskills {
-      background-color: #f9f7f6;
-      display: grid;
-      grid-gap: .5rem;
-      justify-items: center;
-      align-items: center;
-      box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2); }
-      .skills .skills-list .myskills__img {
-        width: 100%;
-        grid-row: 1 / 2;
-        grid-column: 1 / -1;
-        box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.6);
-        backface-visibility: hidden;
-        transition: all .3s; }
-        @media only screen and (min-width: 50em) {
-          .skills .skills-list .myskills__img:hover {
-            border: 0.4rem solid #676767;
-            filter: brightness(0.6);
-            transform: scale(1.45);
-            z-index: 11; }
-          .skills .skills-list .myskills__img:hover + .myskills__hidden-title {
-            opacity: 1;
-            display: inline-block; } }
-      .skills .skills-list .myskills__hidden-title {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-        align-self: center;
-        text-transform: uppercase;
-        color: #fff;
-        text-align: center;
-        font-size: 1.6rem;
-        z-index: 999;
-        opacity: 0;
-        display: none;
-        height: 0; }
-      .skills .skills-list .myskills__title {
-        background-color: #333333;
-        box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
-        color: #fff;
-        grid-row: 2 / 3;
-        grid-column: 1 / -1;
-        align-self: end;
-        justify-self: center;
-        z-index: 10;
-        transform: translateY(-80%);
-        width: 80%;
-        font-size: 1rem;
-        padding: 1rem; }
-      .skills .skills-list .myskills .skill-subtitle {
-        grid-row: 3 / 4;
-        grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 5rem;
-        grid-row-gap: 3rem;
-        justify-items: center;
-        align-items: center;
-        padding: 1rem;
-        text-transform: uppercase;
-        font-size: 1.2rem; }
-        .skills .skills-list .myskills .skill-subtitle__skill1 {
-          grid-row: 1 / 2;
-          grid-column: 1 / 2; }
-        .skills .skills-list .myskills .skill-subtitle__skill2 {
-          grid-row: 1 / 2;
-          grid-column: 2 / 3; }
-        .skills .skills-list .myskills .skill-subtitle__skill3 {
-          grid-row: 2 / 3;
-          grid-column: 1 / 2; }
-        .skills .skills-list .myskills .skill-subtitle__skill4 {
-          grid-row: 2 / 3;
-          grid-column: 2 / 3; }
+        grid-template-columns: repeat(3, 1fr); } }
+    .skills .skills-list__title {
+      color: #fff;
+      text-transform: uppercase;
+      list-style: none;
+      color: #400000;
+      width: 100%; }
+  .skills .skill-desc {
+    display: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-transform: lowercase;
+    font-style: italic; }
+  .skills .expert {
+    padding: .7rem;
+    color: #400000;
+    border-bottom: 0.2rem solid green; }
+  .skills .advanced {
+    padding: .7rem;
+    color: #400000;
+    border-bottom: 0.2rem solid #ff8000; }
+  .skills .intermediate {
+    padding: .7rem;
+    color: #400000;
+    border-bottom: 0.2rem solid red; }
 
 #portfolio-section {
   grid-row: 5 / 6; }
@@ -784,9 +720,6 @@ a {
   display: grid;
   grid-gap: 1.5rem;
   justify-items: center; }
-
-#hobby-section {
-  grid-row: 6 / 7; }
 
 .success-section {
   background-image: linear-gradient(to right bottom, #676767, #333333, #800000);

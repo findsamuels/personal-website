@@ -72,10 +72,12 @@ padding: .5rem;
     opacity: 0;
 }
 .show{
-    display: block;     
-                height: auto;     
-                  animation: slideright 1s ease-in;
-                  opacity: 1;
+    
+    display: block !important;     
+    opacity: 1;
+    animation: slideup .8s;
+       
+                  
     
 }
 .navScroll{
@@ -85,3 +87,4 @@ padding: .5rem;
         font-size: $heading-4-font !important;
         
 }
+

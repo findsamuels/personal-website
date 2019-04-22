@@ -20,6 +20,7 @@
   "homepage": "https://github.com/findsamuels/findsamuels#readme",
   "dependencies": {
     "all": "0.0.0",
+    "aos": "^2.3.4",
     "express": "^4.16.4",
     "live-server": "^1.2.1",
     "node-sass": "^4.11.0",
