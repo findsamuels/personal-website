@@ -171,10 +171,20 @@
   .form__input {
     grid-row: 2 / 3;
     width: 90%;
+    position: relative;
     padding: 1rem; }
+    .form__input:valid {
+      border-color: black; }
+    .form__input:invalid {
+      border-color: red; }
   .form__submit {
     grid-row: 3 / 4;
     width: 90%; }
+
+.emailInvalid {
+  color: #ff0000;
+  animation: slideup 3s;
+  display: none; }
 
 .head {
   background-image: linear-gradient(to right top, #333333, #676767, #400000);
@@ -555,7 +565,7 @@ a {
 .show {
   display: block !important;
   opacity: 1;
-  animation: slideup .8s; }
+  animation: slideup .4s; }
 
 .navScroll {
   box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.4);

@@ -55,6 +55,39 @@ let showInspiration = document.querySelectorAll('.inspiration-box');
 let showSkills = document.querySelectorAll('.skills');
 let showPortfolio = document.querySelectorAll('.portfolio');
 
+///////////////////////////////FORM CONTROL///////////////////////////////
+
+function formValidate(form) {
+    const emailvalidator = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+   
+    console.log('clicked');
+    if (emailvalidator.test(form.email.value)) {
+        
+        document.querySelector('.emailInvalid').classList.remove('show');
+return true;
+    } else  {
+      
+        document.querySelector('.emailInvalid').classList.add('show');
+       form.email.focus();
+       return false;
+    }
+   
+}
+
+// let btnSubmit = document.querySelector('.submitForm');
+
+// btnSubmit.addEventListener('click', () => {
+    
+//     let formControl = document.querySelector('.form');
+   
+   
+// });
+
+//  function formControl() {
+    
+// }
+
+
 //////////////////////////////SKILL- CLASS////////////////////////////////////
 const skillList = Array.from(document.querySelectorAll('.skills-list__title'));
 const skilldesc = document.querySelectorAll('.skill-desc');

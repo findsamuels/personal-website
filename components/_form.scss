@@ -63,12 +63,27 @@ grid-row: 1 / 2;
          &__input{
              grid-row: 2 / 3;
            width: 90%;
-             
+             position: relative;
                 
                 padding: 1rem;
+
+                &:valid{
+border-color: black;
+                }
+                &:invalid{
+border-color: red;
+                }
+
+                
            }
             &__submit{
                 grid-row: 3 / 4;
                 width: 90%;
             }
+}
+
+.emailInvalid{
+    color: $color-red;
+    animation: slideup 3s;
+    display: none;
 }
