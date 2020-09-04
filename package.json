@@ -23,7 +23,7 @@
     "aos": "^2.3.4",
     "express": "^4.16.4",
     "live-server": "^1.2.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "npm-run": "^5.0.1"
   },
   "devDependencies": {
